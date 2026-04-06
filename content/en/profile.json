@@ -1,0 +1,28 @@
+{
+  "name": "Xinyang Gao",
+  "title": "PhD Student",
+  "affiliation": "Peking University",
+  "about": "I am a researcher in political science. My research interests include Chinese politics and comparative politics.",
+  "email": "xinyang0614@pku.edu.cn",
+  "cv": "./public/cv/cv-en.pdf",
+  "researchInterests": [
+    "Political Economy",
+    "Disaster and Risk Politics",
+    "Elite and Bureaucracy",
+    "Computational Politics"
+  ],
+  "externalLinks": [
+    {
+      "name": "PKU Scholar Profile",
+      "url": "http://scholar.pku.edu.cn/xinyang"
+    },
+    {
+      "name": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=HshxUmUAAAAJ&hl=en"
+    },
+    {
+      "name": "ResearchGate",
+      "url": "https://www.researchgate.net/profile/Xinyang-Gao-4?ev=hdr_xprf"
+    }
+  ]
+}

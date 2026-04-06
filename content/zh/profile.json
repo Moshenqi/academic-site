@@ -1,0 +1,28 @@
+{
+  "name": "高昕阳",
+  "title": "博士研究生",
+  "affiliation": "北京大学",
+  "about": "我主要从事中国政治、比较政治相关研究。",
+  "email": "xinyang0614@pku.edu.cn",
+  "cv": "./public/cv/cv-zh.pdf",
+  "researchInterests": [
+    "政治经济学",
+    "灾害与风险政治",
+    "精英与官僚制",
+    "计算政治"
+  ],
+  "externalLinks": [
+    {
+      "name": "北大学者主页",
+      "url": "http://scholar.pku.edu.cn/xinyang"
+    },
+    {
+      "name": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=HshxUmUAAAAJ&hl=zh-CN"
+    },
+    {
+      "name": "ResearchGate",
+      "url": "https://www.researchgate.net/profile/Xinyang-Gao-4?ev=hdr_xprf"
+    }
+  ]
+}

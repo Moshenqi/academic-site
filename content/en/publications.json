@@ -1,0 +1,27 @@
+{
+  "publications": [
+    {
+      "title": "Publication title placeholder",
+      "authors": "Xinyang Gao",
+      "venue": "Journal Name",
+      "year": 2026,
+      "status": "Forthcoming",
+      "links": [
+        {
+          "label": "PDF",
+          "url": "#"
+        }
+      ]
+    }
+  ],
+  "workingPapers": [
+    {
+      "title": "Working paper title placeholder",
+      "authors": "Xinyang Gao, Coauthor",
+      "venue": "Working Paper",
+      "year": 2026,
+      "status": "Draft available upon request",
+      "links": []
+    }
+  ]
+}

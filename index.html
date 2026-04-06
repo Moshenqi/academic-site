@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xinyang Gao | Academic Homepage</title>
+    <meta
+      name="description"
+      content="Xinyang Gao academic homepage: research, publications, working papers, teaching, CV and contact."
+    />
+    <meta property="og:title" content="Xinyang Gao | Academic Homepage" />
+    <meta
+      property="og:description"
+      content="Research, publications, working papers, teaching, CV and contact."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://xinyanggao.com/" />
+    <meta property="og:image" content="https://example.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://xinyanggao.com/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://xinyanggao.com/?lang=zh" />
+    <link rel="alternate" hreflang="en" href="https://xinyanggao.com/?lang=en" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#hero" class="brand" data-i18n="name">Xinyang Gao</a>
+        <div class="header-actions">
+          <nav class="mini-nav">
+            <a href="#publications" data-i18n="navPublications">Publications</a>
+            <a href="#contact" data-i18n="navContact">Contact</a>
+          </nav>
+          <button id="lang-toggle" class="lang-btn" aria-label="toggle language">
+            EN
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="hero" class="section hero">
+        <h1 data-i18n="name">Xinyang Gao</h1>
+        <p class="subtitle" data-i18n="title">Assistant Professor / Researcher</p>
+        <p data-i18n="affiliation">Peking University</p>
+        <p class="motto" data-i18n="motto">LIFE IS SHORT, KEEP FORWARD.</p>
+      </section>
+
+      <section id="about" class="section">
+        <h2 data-i18n="aboutHeading">About</h2>
+        <p id="about-text"></p>
+      </section>
+
+      <section id="research" class="section">
+        <h2 data-i18n="researchHeading">Research Interests</h2>
+        <ul id="research-list" class="tag-list"></ul>
+      </section>
+
+      <section id="publications" class="section">
+        <h2 data-i18n="pubHeading">Publications</h2>
+        <ul id="publications-list" class="paper-list"></ul>
+      </section>
+
+      <section id="working-papers" class="section">
+        <h2 data-i18n="wpHeading">Working Papers</h2>
+        <ul id="working-papers-list" class="paper-list"></ul>
+      </section>
+
+      <section id="teaching" class="section">
+        <h2 data-i18n="teachingHeading">Teaching</h2>
+        <ul id="teaching-list" class="plain-list"></ul>
+      </section>
+
+      <section id="cv" class="section">
+        <h2 data-i18n="cvHeading">CV</h2>
+        <p>
+          <a id="cv-link" href="./public/cv/cv-en.pdf" target="_blank" rel="noopener">
+            Download CV
+          </a>
+        </p>
+      </section>
+
+      <section id="contact" class="section">
+        <h2 data-i18n="contactHeading">Contact</h2>
+        <p>
+          <span data-i18n="emailLabel">Email</span>:
+          <a id="email-link" href="mailto:your-email@example.com">your-email@example.com</a>
+        </p>
+        <p>
+          <span data-i18n="institutionLabel">Institution</span>:
+          <span id="institution-text"></span>
+        </p>
+      </section>
+
+      <section id="links" class="section">
+        <h2 data-i18n="linksHeading">External Links</h2>
+        <ul id="external-links-list" class="plain-list"></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          <span id="footer-name">Xinyang Gao</span> ·
+          <span data-i18n="footerText">Academic Homepage</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/site.js"></script>
+  </body>
+</html>

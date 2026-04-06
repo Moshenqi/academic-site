@@ -1,0 +1,27 @@
+{
+  "publications": [
+    {
+      "title": "论文题目占位",
+      "authors": "高昕阳",
+      "venue": "期刊名称",
+      "year": 2026,
+      "status": "即将刊出",
+      "links": [
+        {
+          "label": "PDF",
+          "url": "#"
+        }
+      ]
+    }
+  ],
+  "workingPapers": [
+    {
+      "title": "工作论文题目占位",
+      "authors": "高昕阳, 合作者",
+      "venue": "工作论文",
+      "year": 2026,
+      "status": "可邮件索取",
+      "links": []
+    }
+  ]
+}
