@@ -1,27 +1,45 @@
 {
   "publications": [
     {
-      "title": "Publication title placeholder",
-      "authors": "Xinyang Gao",
-      "venue": "Journal Name",
-      "year": 2026,
-      "status": "Forthcoming",
+      "title": "The Overrepresented Winner? Ethnic Minority Legislators in China's National People's Congress",
+      "authors": "Wenhui Yang, Xinyang Gao",
+      "venue": "The China Quarterly",
+      "year": 2025,
+      "status": "First Online",
       "links": [
         {
           "label": "PDF",
-          "url": "#"
+          "url": "https://www.cambridge.org/core/journals/china-quarterly/article/abs/overrepresented-winner-ethnic-minority-legislators-in-chinas-national-peoples-congress/2885E5428462F16E4B1AAD5DB1CAFF38"
+        }
+      ]
+    },
+    {
+      "title": "Can the opening of high-speed rail promote household multidimensional relative poverty alleviation?",
+      "authors": "Yaning Hu, Haiyan Lu, Hao Chai, Xinyang Gao",
+      "venue": "Journal of Transport Geography",
+      "year": 2025,
+      "status": "Vol. 128",
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://doi.org/10.1016/j.jtrangeo.2025.128"
         }
       ]
     }
   ],
   "workingPapers": [
     {
-      "title": "Working paper title placeholder",
-      "authors": "Xinyang Gao, Coauthor",
-      "venue": "Working Paper",
+      "title": "Improving Research Idea Generation Through Data: An Empirical Investigation in Social Science",
+      "authors": "Xiao Liu, Xinyi Dong, Xinyang Gao, Yansong Feng, Xun Pang",
+      "venue": "Arxiv",
       "year": 2026,
-      "status": "Draft available upon request",
-      "links": []
+      "status": "Working Paper",
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/abs/2505.21396"
+        }
+      ]
     }
   ]
 }
