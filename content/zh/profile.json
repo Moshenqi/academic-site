@@ -2,7 +2,10 @@
   "name": "高昕阳",
   "title": "博士研究生",
   "affiliation": "北京大学",
-  "about": "我主要从事中国政治、比较政治相关研究。",
+  "about": [
+    "我是北京大学博士研究生，主要从事中国政治与比较政治研究，关注政治经济学、灾害与风险政治、精英与官僚制，以及政治学的计算方法。",
+    "研究成果见于 <em>The China Quarterly</em>、<em>Journal of Transport Geography</em> 等期刊。"
+  ],
   "email": "xinyang0614@pku.edu.cn",
   "cv": "./public/cv/cv-zh.pdf",
   "researchInterests": [
@@ -10,6 +13,24 @@
     "灾害与风险政治",
     "精英与官僚制",
     "计算政治"
+  ],
+  "news": [
+    {
+      "date": "2025",
+      "text": "新工作论文 \"Improving Research Idea Generation Through Data\" 已发布于 <a href=\"https://arxiv.org/abs/2505.21396\" target=\"_blank\" rel=\"noopener\">arXiv</a>。"
+    },
+    {
+      "date": "2025",
+      "text": "论文 \"The Overrepresented Winner? Ethnic Minority Legislators in China's National People's Congress\" 在 <em>The China Quarterly</em> 在线发表。"
+    },
+    {
+      "date": "2025",
+      "text": "关于高铁开通与家庭多维相对贫困的论文发表于 <em>Journal of Transport Geography</em>。"
+    },
+    {
+      "date": "2025",
+      "text": "译文《民族主义与战争：宏观比较的视角》刊于《北大政治学评论》第十九辑。"
+    }
   ],
   "externalLinks": [
     {

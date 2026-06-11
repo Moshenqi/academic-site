@@ -3,120 +3,153 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xinyang Gao | Academic Homepage</title>
+    <title>Xinyang Gao 高昕阳 | Academic Homepage</title>
     <meta
       name="description"
-      content="Xinyang Gao academic homepage: research, publications, working papers, CV and contact."
+      content="Xinyang Gao (高昕阳), PhD student at Peking University. Research on political economy, disaster and risk politics, elites and bureaucracy, and computational politics."
     />
-    <meta property="og:title" content="Xinyang Gao | Academic Homepage" />
+    <meta property="og:title" content="Xinyang Gao 高昕阳 | Academic Homepage" />
     <meta
       property="og:description"
       content="Research, publications, working papers, CV and contact."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://xinyanggao.com/" />
+    <meta property="og:url" content="https://www.xinyanggao.com/" />
+    <meta property="og:image" content="https://www.xinyanggao.com/assets/img/banner.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://xinyanggao.com/" />
-    <link rel="alternate" hreflang="zh-CN" href="https://xinyanggao.com/?lang=zh" />
-    <link rel="alternate" hreflang="en" href="https://xinyanggao.com/?lang=en" />
+    <link rel="canonical" href="https://www.xinyanggao.com/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://www.xinyanggao.com/?lang=zh" />
+    <link rel="alternate" hreflang="en" href="https://www.xinyanggao.com/?lang=en" />
+    <script>
+      // Apply saved/system theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;500;600&family=Noto+Serif+SC:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Xinyang Gao",
+        "alternateName": "高昕阳",
+        "url": "https://www.xinyanggao.com/",
+        "image": "https://www.xinyanggao.com/assets/img/portrait.jpg",
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "Peking University" },
+        "email": "mailto:xinyang0614@pku.edu.cn"
+      }
+    </script>
   </head>
-  <body>
-    <!-- Mobile top bar -->
-    <header class="mobile-header">
-      <button id="menu-toggle" class="menu-btn" aria-label="toggle menu">&#9776;</button>
-      <span class="mobile-brand" data-i18n="name">Xinyang Gao</span>
-      <div class="mobile-actions">
-        <button id="theme-toggle-mobile" class="icon-btn" aria-label="toggle dark mode">&#9790;</button>
-        <button id="lang-toggle-mobile" class="lang-btn" aria-label="toggle language">EN</button>
+  <body id="top">
+    <!-- Top navigation -->
+    <header class="topnav" id="topnav">
+      <a class="brand" href="#top">
+        <span data-i18n="name">Xinyang Gao</span>
+        <span class="brand-alt" id="brand-alt">高昕阳</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#about" data-i18n="aboutHeading">About</a>
+        <a href="#news" data-i18n="newsHeading">News</a>
+        <a href="#publications" data-i18n="pubHeading">Publications</a>
+        <a href="#cv" data-i18n="cvHeading">CV</a>
+        <a href="#contact" data-i18n="contactHeading">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="toggle dark mode">
+          <span class="theme-icon">&#9790;</span>
+        </button>
+        <button id="lang-toggle" class="lang-btn" aria-label="toggle language">EN</button>
       </div>
     </header>
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-content">
-        <div class="sidebar-top">
-          <div class="avatar-wrapper">
-            <img
-              id="avatar"
-              src="./assets/img/avatar.jpg"
-              alt="Xinyang Gao"
-              class="avatar"
-              onerror="this.style.display='none'"
-            />
-          </div>
-          <h1 class="sidebar-name" data-i18n="name">Xinyang Gao</h1>
-          <p class="sidebar-name-alt" id="name-alt">高昕阳</p>
-          <p class="sidebar-title" data-i18n="title">PhD Student</p>
-          <p class="sidebar-affiliation" data-i18n="affiliation">Peking University</p>
-        </div>
-
-        <nav class="sidebar-nav">
-          <a href="#about" data-i18n="aboutHeading">About</a>
-          <a href="#research" data-i18n="researchHeading">Research Interests</a>
-          <a href="#publications" data-i18n="pubHeading">Publications</a>
-          <a href="#working-papers" data-i18n="wpHeading">Working Papers</a>
-          <a href="#cv" data-i18n="cvHeading">CV</a>
-          <a href="#contact" data-i18n="contactHeading">Contact</a>
-        </nav>
-
-        <div class="sidebar-social">
-          <a id="sidebar-email" href="mailto:xinyang0614@pku.edu.cn" title="Email" aria-label="Email">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
-          </a>
-          <a id="sidebar-scholar" href="#" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-3a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM1 10L12 0l11 10h-4v2H5v-2z"/></svg>
-          </a>
-          <a id="sidebar-researchgate" href="#" target="_blank" rel="noopener" title="ResearchGate" aria-label="ResearchGate">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 3C18.1 3 16.8 4 16.3 5.4c-.4 1.1.1 2.3 1.2 2.7.3.1.5.1.8.1 1 0 2-.7 2.3-1.7.4-1.1-.1-2.3-1.2-2.7-.3-.1-.5-.2-.8-.2zM12 6C7.6 6 4 9.6 4 14s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 13c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z"/></svg>
-          </a>
-          <a id="sidebar-github" href="https://github.com/Moshenqi" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          </a>
-        </div>
-
-        <div class="sidebar-bottom">
-          <button id="theme-toggle" class="icon-btn" aria-label="toggle dark mode">
-            <span class="theme-icon">&#9790;</span>
-          </button>
-          <button id="lang-toggle" class="lang-btn" aria-label="toggle language">EN</button>
-        </div>
+    <!-- Hero banner -->
+    <section class="hero">
+      <img class="hero-img" src="./assets/img/banner.jpg" alt="Xin'anjiang Hydropower Station" />
+      <div class="hero-shade"></div>
+      <div class="hero-inner">
+        <h1 class="hero-name" data-i18n="name">Xinyang Gao</h1>
+        <p class="hero-name-alt" id="hero-name-alt">高昕阳</p>
+        <p class="hero-sub">
+          <span data-i18n="title">PhD Student</span>
+          <span class="hero-dot">&middot;</span>
+          <span data-i18n="affiliation">Peking University</span>
+        </p>
       </div>
-    </aside>
-
-    <!-- Overlay for mobile menu -->
-    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+      <p class="hero-credit" data-i18n="heroCredit"></p>
+    </section>
 
     <!-- Main content -->
     <main class="content">
       <section id="about" class="section fade-in">
-        <h2 data-i18n="aboutHeading">About</h2>
-        <p id="about-text"></p>
+        <h2><span data-i18n="aboutHeading">About</span></h2>
+        <div class="about-grid">
+          <figure class="portrait">
+            <img src="./assets/img/portrait.jpg" alt="Portrait of Xinyang Gao" />
+          </figure>
+          <div class="about-body">
+            <div id="about-text"></div>
+            <p class="interests-label" data-i18n="researchHeading">Research Interests</p>
+            <ul id="research-list" class="tag-list"></ul>
+            <div class="icon-row">
+              <a id="link-email" href="mailto:xinyang0614@pku.edu.cn" title="Email" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+                <span>Email</span>
+              </a>
+              <a id="link-scholar" href="#" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-3a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM1 10L12 0l11 10h-4v2H5v-2z"/></svg>
+                <span>Scholar</span>
+              </a>
+              <a id="link-researchgate" href="#" target="_blank" rel="noopener" title="ResearchGate" aria-label="ResearchGate">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 3C18.1 3 16.8 4 16.3 5.4c-.4 1.1.1 2.3 1.2 2.7.3.1.5.1.8.1 1 0 2-.7 2.3-1.7.4-1.1-.1-2.3-1.2-2.7-.3-.1-.5-.2-.8-.2zM12 6C7.6 6 4 9.6 4 14s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 13c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z"/></svg>
+                <span>ResearchGate</span>
+              </a>
+              <a id="link-pku" href="http://scholar.pku.edu.cn/xinyang" target="_blank" rel="noopener" title="PKU Scholar" aria-label="PKU Scholar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 8l10 6 10-6-10-6z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/></svg>
+                <span data-i18n="pkuLabel">PKU Scholar</span>
+              </a>
+              <a id="link-github" href="https://github.com/Moshenqi" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="research" class="section fade-in">
-        <h2 data-i18n="researchHeading">Research Interests</h2>
-        <ul id="research-list" class="tag-list"></ul>
+      <section id="news" class="section fade-in">
+        <h2><span data-i18n="newsHeading">News</span></h2>
+        <ul id="news-list" class="news-list"></ul>
       </section>
 
       <section id="publications" class="section fade-in">
-        <h2 data-i18n="pubHeading">Publications</h2>
-        <ul id="publications-list" class="paper-list"></ul>
+        <h2><span data-i18n="pubHeading">Publications</span></h2>
+        <ol id="publications-list" class="paper-list"></ol>
       </section>
 
       <section id="working-papers" class="section fade-in">
-        <h2 data-i18n="wpHeading">Working Papers</h2>
-        <ul id="working-papers-list" class="paper-list"></ul>
+        <h2><span data-i18n="wpHeading">Working Papers</span></h2>
+        <ol id="working-papers-list" class="paper-list"></ol>
       </section>
 
+      <figure class="moment fade-in">
+        <img src="./assets/img/talk.jpg" alt="Xinyang Gao presenting at Peking University" loading="lazy" />
+        <figcaption data-i18n="talkCaption"></figcaption>
+      </figure>
+
       <section id="cv" class="section fade-in">
-        <h2 data-i18n="cvHeading">CV</h2>
+        <h2><span data-i18n="cvHeading">CV</span></h2>
+        <p data-i18n="cvLead">My full curriculum vitae is available here:</p>
         <p>
           <a id="cv-link" href="./public/cv/cv-en.pdf" target="_blank" rel="noopener" class="cv-btn">
             Download CV
@@ -125,26 +158,28 @@
       </section>
 
       <section id="contact" class="section fade-in">
-        <h2 data-i18n="contactHeading">Contact</h2>
-        <p>
-          <span data-i18n="emailLabel">Email</span>:
-          <a id="email-link" href="mailto:xinyang0614@pku.edu.cn">xinyang0614@pku.edu.cn</a>
-        </p>
-        <p>
-          <span data-i18n="institutionLabel">Institution</span>:
-          <span id="institution-text"></span>
-        </p>
+        <h2><span data-i18n="contactHeading">Contact</span></h2>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label" data-i18n="emailLabel">Email</span>
+            <a id="email-link" href="mailto:xinyang0614@pku.edu.cn">xinyang0614@pku.edu.cn</a>
+          </li>
+          <li>
+            <span class="contact-label" data-i18n="institutionLabel">Institution</span>
+            <span id="institution-text"></span>
+          </li>
+          <li>
+            <span class="contact-label" data-i18n="linksHeading">Links</span>
+            <span id="external-links-inline"></span>
+          </li>
+        </ul>
       </section>
-
-      <section id="links" class="section fade-in">
-        <h2 data-i18n="linksHeading">External Links</h2>
-        <ul id="external-links-list" class="plain-list"></ul>
-      </section>
-
-      <footer class="site-footer">
-        <p>&copy; <span id="footer-year"></span> <span id="footer-name">Xinyang Gao</span></p>
-      </footer>
     </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="footer-year"></span> <span id="footer-name">Xinyang Gao</span></p>
+      <p class="footer-credit" data-i18n="footerCredit"></p>
+    </footer>
 
     <script src="./assets/js/site.js"></script>
   </body>
