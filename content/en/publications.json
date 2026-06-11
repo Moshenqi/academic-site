@@ -1,7 +1,11 @@
 {
   "authorLinks": {
     "Weilin Xiao": "https://xwl822.github.io/",
-    "Songpo Yang": "https://www.songpoyang.com/"
+    "Songpo Yang": "https://www.songpoyang.com/",
+    "Wenhui Yang": "https://wenhuiyang.weebly.com/",
+    "Duancheng Yang": "https://dcyeo.github.io/",
+    "Andreas Wimmer": "https://www.awimmer.com/",
+    "Xiao Liu": "https://xxxiaol.github.io/"
   },
   "publications": [
     {
@@ -14,6 +18,18 @@
       "links": [
         { "label": "PDF", "url": "./public/papers/yang-gao-2026-overrepresented-winner-cq.pdf" },
         { "label": "DOI", "url": "https://doi.org/10.1017/S0305741025101690" }
+      ]
+    },
+    {
+      "title": "Augmenting Research Ideation with Data: An Empirical Investigation in Social Science",
+      "authors": "Xiao Liu, Xinyi Dong, Xinyang Gao, Yansong Feng, Xun Pang",
+      "venue": "AI4Science Workshop at NeurIPS",
+      "year": 2025,
+      "status": "Spotlight",
+      "abstract": "Recent advancements in large language models (LLMs) demonstrate strong potential for generating novel research ideas, yet such ideas often struggle with feasibility and effectiveness. In this paper, we investigate whether augmenting LLMs with relevant data during the ideation process can improve idea quality. Our framework integrates data at two stages: (1) incorporating metadata during idea generation to guide models toward more feasible concepts, and (2) introducing an automated preliminary validation step during idea selection to assess the empirical plausibility of hypotheses within ideas. We evaluate our approach in the social science domain, with a specific focus on climate negotiation topics. Expert evaluation shows that metadata improves the feasibility of generated ideas by 20%, while automated validation improves the overall quality of selected ideas by 7%. Beyond assessing the quality of LLM-generated ideas, we conduct a human study to examine whether these ideas, augmented with related data and preliminary validation, can inspire researchers in their own ideation. Participants report that the LLM-generated ideas and validation are highly useful, and the ideas they propose with such support are proven to be of higher quality than those proposed without assistance. Our findings highlight the potential of data-augmented research ideation and underscore the practical value of LLM-assisted ideation in real-world academic settings.",
+      "links": [
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2505.21396" },
+        { "label": "PDF", "url": "./public/papers/liu-dong-gao-feng-pang-2026-augmenting-research-ideation.pdf" }
       ]
     },
     {
@@ -34,6 +50,7 @@
       "venue": "Peking University Political Science Review",
       "year": 2025,
       "status": "Vol. 19",
+      "abstract": "The role of nationalism in the modern world has become increasingly prominent. In most countries, its rise has been closely intertwined with war, shaping both domestic and international conflict. Traditionally, nationalism has been understood either as a byproduct of war or as an instrument of mass mobilization. This article argues instead that nationalism should be seen not only as a catalyst for war but also as a fundamental explanatory factor behind violent conflicts—including civil wars and interstate wars—over the past two centuries. Drawing on macro-historical evidence, the study identifies a “double-wave pattern” of conflict: the first wave was driven by imperialist expansion and large-scale wars of conquest, while the second emerged from the rise of nationalist movements that challenged imperial rule, giving rise to separatist wars and interstate rivalries. Two contemporary case studies further demonstrate how ethnic political exclusion within nation-states can generate civil wars and how cross-border ethnic ties can trigger interstate conflicts. The article concludes by emphasizing that wars fueled by nationalism are not inevitable; mechanisms such as power-sharing and assimilation provide viable pathways for mitigating ethnic inequalities and reducing the risk of conflict.",
       "links": [
         { "label": "PDF", "url": "./public/papers/wimmer-gao-2025-nationalism-war-translation.pdf" }
       ]
@@ -45,7 +62,7 @@
       "authors": "Xinyang Gao, Weilin Xiao, Songpo Yang",
       "venue": "Working Paper",
       "year": 2026,
-      "status": "Draft available upon request",
+      "status": "",
       "abstract": "Voters and political selectors reward candidates who look the part, on a tacit assumption that those who look like able representatives will go on to represent. We argue that this translation is conditional, not automatic. An appearance advantage at selection carries into office only where holding office rewards visible effort. China's Local People's Congresses, whose deputies are indirectly elected and answer upward rather than to voters, are a setting where those incentives are weak. Scoring the faces of nearly five thousand provincial deputies with a deep-learning model that rates them as human observers would, we ask whether favorable facial traits predict the suggestions they file. They do not. Deputies who look more competent, trustworthy, attractive, or aggressive are no more active or responsive than their peers, and the most competent-looking file somewhat fewer. Appearance, we conclude, is an unreliable guide to the substance of representation: voters and selectors who read capability from a face are apt to be misled, whether under open elections or under appointment, and do better to weigh records than looks. The look of a representative is not the work of one.",
       "links": []
     },
@@ -54,21 +71,9 @@
       "authors": "Weilin Xiao, Xinyang Gao",
       "venue": "Working Paper",
       "year": 2026,
-      "status": "Draft available upon request",
+      "status": "",
       "abstract": "How do socialist institutional legacies shape the distributional consequences of regime transition? While modernization theory predicts that markets reduce ascriptive inequality, post-communist transitions witness paradoxical regression in female labor force participation. We propose an institutional dependence theory: because gender equality under state socialism was sustained by administrative fiat rather than endogenous development, deeper welfare-state penetration left women dependent on institutional protection and vulnerable to state retreat. We test this argument using China's 1990s marketization reform, leveraging the “Third Front Construction” campaign as a natural experiment for exogenous variation in pre-reform danwei (work unit) intensity. Using difference-in-differences and instrumental variable designs on county-level census data (1982–2000), we find that regions with extensive danwei legacies experienced significantly larger widening of the gender labor gap, driven by discriminatory public-sector displacement and re-familialization of care work, moderated by competing cultural legacies. These findings challenge linear modernization narratives, highlighting how socialist institutional legacies condition the gendered costs of market transition.",
       "links": []
-    },
-    {
-      "title": "Augmenting Research Ideation with Data: An Empirical Investigation in Social Science",
-      "authors": "Xiao Liu, Xinyi Dong, Xinyang Gao, Yansong Feng, Xun Pang",
-      "venue": "arXiv preprint",
-      "year": 2026,
-      "status": "arXiv:2505.21396",
-      "abstract": "Recent advancements in large language models (LLMs) demonstrate strong potential for generating novel research ideas, yet such ideas often struggle with feasibility and effectiveness. In this paper, we investigate whether augmenting LLMs with relevant data during the ideation process can improve idea quality. Our framework integrates data at two stages: (1) incorporating metadata during idea generation to guide models toward more feasible concepts, and (2) introducing an automated preliminary validation step during idea selection to assess the empirical plausibility of hypotheses within ideas. We evaluate our approach in the social science domain, with a specific focus on climate negotiation topics. Expert evaluation shows that metadata improves the feasibility of generated ideas by 20%, while automated validation improves the overall quality of selected ideas by 7%. Beyond assessing the quality of LLM-generated ideas, we conduct a human study to examine whether these ideas, augmented with related data and preliminary validation, can inspire researchers in their own ideation. Participants report that the LLM-generated ideas and validation are highly useful, and the ideas they propose with such support are proven to be of higher quality than those proposed without assistance. Our findings highlight the potential of data-augmented research ideation and underscore the practical value of LLM-assisted ideation in real-world academic settings.",
-      "links": [
-        { "label": "arXiv", "url": "https://arxiv.org/abs/2505.21396" },
-        { "label": "PDF", "url": "./public/papers/liu-dong-gao-feng-pang-2026-augmenting-research-ideation.pdf" }
-      ]
     }
   ]
 }

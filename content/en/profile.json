@@ -1,10 +1,12 @@
 {
   "name": "Xinyang Gao",
   "title": "PhD Student",
-  "affiliation": "Peking University",
+  "affiliation": "School of Government, Peking University",
+  "address": "School of Government, Peking University, 5 Yiheyuan Road, Haidian District, Beijing 100871, China",
   "about": [
-    "I am a PhD student at Peking University, working on Chinese politics and comparative politics. My research focuses on political economy, disaster and risk politics, elites and bureaucracy, and computational approaches to political science.",
-    "My work has appeared in <em>The China Quarterly</em> and the <em>Journal of Transport Geography</em>."
+    "Welcome! I am Xinyang Gao (高昕阳), a PhD student in Chinese politics at the <a href=\"https://www.sg.pku.edu.cn/\" target=\"_blank\" rel=\"noopener\">School of Government, Peking University</a>. I received my BA in political science and public administration from Peking University, with a double degree in sociology, and completed my graduate training in comparative politics in the same school. I am fortunate to be advised by <a href=\"https://xiao-ma.me/\" target=\"_blank\" rel=\"noopener\">Xiao Ma</a>, Jie Yan and <a href=\"https://wenhuiyang.weebly.com/\" target=\"_blank\" rel=\"noopener\">Wenhui Yang</a>.",
+    "My research interests lie in political economy, disaster and risk politics, elites and bureaucracy, and computational political science. My work has appeared in <em>The China Quarterly</em>, the <em>Journal of Transport Geography</em>, the <em>Peking University Political Science Review</em>, and the AI4Science Workshop at NeurIPS 2025.",
+    "I also serve as a research assistant at the Research Center for Contemporary China (RCCC), the Analytics Lab for Global Risk Politics at Peking University, and the editorial team of the <em>Peking University Political Science Review</em>."
   ],
   "email": "xinyang0614@pku.edu.cn",
   "cv": "./public/cv/cv-en.pdf",

@@ -1,10 +1,12 @@
 {
   "name": "高昕阳",
   "title": "博士研究生",
-  "affiliation": "北京大学",
+  "affiliation": "北京大学政府管理学院",
+  "address": "北京市海淀区颐和园路5号 北京大学政府管理学院 100871",
   "about": [
-    "我是北京大学博士研究生，主要从事中国政治与比较政治研究，关注政治经济学、灾害与风险政治、精英与官僚制，以及政治学的计算方法。",
-    "研究成果见于 <em>The China Quarterly</em>、<em>Journal of Transport Geography</em> 等期刊。"
+    "欢迎！我是高昕阳，<a href=\"https://www.sg.pku.edu.cn/\" target=\"_blank\" rel=\"noopener\">北京大学政府管理学院</a>博士研究生（中国政治方向）。本科毕业于北京大学政治学与行政学专业，获社会学双学位，硕士阶段攻读比较政治学。师从<a href=\"https://xiao-ma.me/\" target=\"_blank\" rel=\"noopener\">马啸</a>长聘副教授、严洁教授与<a href=\"https://wenhuiyang.weebly.com/\" target=\"_blank\" rel=\"noopener\">杨文辉</a>助理教授。",
+    "主要研究兴趣为政治经济学、灾害与风险政治、精英与官僚制以及计算政治学。论文发表于 <em>The China Quarterly</em>、<em>Journal of Transport Geography</em>、《北大政治学评论》以及 NeurIPS 2025 AI4Science Workshop。",
+    "现担任北京大学中国国情研究中心、北京大学全球风险政治分析实验室以及《北大政治学评论》编辑部研究助理。"
   ],
   "email": "xinyang0614@pku.edu.cn",
   "cv": "./public/cv/cv-zh.pdf",

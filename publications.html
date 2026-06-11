@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publications | Xinyang Gao 高昕阳</title>
+    <meta name="description" content="Publications and working papers of Xinyang Gao (高昕阳)." />
+    <link rel="canonical" href="https://www.xinyanggao.com/publications" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;500;600&family=Noto+Serif+SC:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="topnav" id="topnav">
+      <a class="brand" href="./index.html">
+        <span data-i18n="name">Xinyang Gao</span>
+        <span class="brand-alt js-name-alt">高昕阳</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="./about.html" data-i18n="aboutHeading">About</a>
+        <a href="./publications.html" data-i18n="pubHeading">Publications</a>
+        <a href="./cv.html" data-i18n="cvHeading">CV</a>
+        <a href="./contact.html" data-i18n="contactHeading">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn js-theme-toggle" aria-label="toggle dark mode">
+          <span class="theme-icon">&#9790;</span>
+        </button>
+        <button class="lang-btn js-lang-toggle" aria-label="toggle language">EN</button>
+      </div>
+    </header>
+
+    <div class="page-banner">
+      <img src="./assets/img/banner.jpg" alt="" />
+      <div class="page-banner-shade"></div>
+      <h1 data-i18n="pubHeading">Publications</h1>
+    </div>
+
+    <main class="content">
+      <section id="publications" class="section fade-in">
+        <h2><span data-i18n="pubHeading">Publications</span></h2>
+        <ol id="publications-list" class="paper-list"></ol>
+      </section>
+
+      <section id="working-papers" class="section fade-in">
+        <h2><span data-i18n="wpHeading">Working Papers</span></h2>
+        <ol id="working-papers-list" class="paper-list"></ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="footer-year"></span> <span id="footer-name">Xinyang Gao</span></p>
+      <p class="footer-credit" data-i18n="footerCredit"></p>
+    </footer>
+
+    <script src="./assets/js/site.js"></script>
+  </body>
+</html>

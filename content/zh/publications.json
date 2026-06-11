@@ -1,7 +1,13 @@
 {
   "authorLinks": {
     "Weilin Xiao": "https://xwl822.github.io/",
-    "Songpo Yang": "https://www.songpoyang.com/"
+    "Songpo Yang": "https://www.songpoyang.com/",
+    "Wenhui Yang": "https://wenhuiyang.weebly.com/",
+    "Duancheng Yang": "https://dcyeo.github.io/",
+    "Andreas Wimmer": "https://www.awimmer.com/",
+    "Xiao Liu": "https://xxxiaol.github.io/",
+    "安德烈亚斯·威默": "https://www.awimmer.com/",
+    "杨端程": "https://dcyeo.github.io/"
   },
   "publications": [
     {
@@ -14,6 +20,18 @@
       "links": [
         { "label": "PDF", "url": "./public/papers/yang-gao-2026-overrepresented-winner-cq.pdf" },
         { "label": "DOI", "url": "https://doi.org/10.1017/S0305741025101690" }
+      ]
+    },
+    {
+      "title": "Augmenting Research Ideation with Data: An Empirical Investigation in Social Science",
+      "authors": "Xiao Liu, Xinyi Dong, Xinyang Gao, Yansong Feng, Xun Pang",
+      "venue": "AI4Science Workshop at NeurIPS",
+      "year": 2025,
+      "status": "Spotlight",
+      "abstract": "Recent advancements in large language models (LLMs) demonstrate strong potential for generating novel research ideas, yet such ideas often struggle with feasibility and effectiveness. In this paper, we investigate whether augmenting LLMs with relevant data during the ideation process can improve idea quality. Our framework integrates data at two stages: (1) incorporating metadata during idea generation to guide models toward more feasible concepts, and (2) introducing an automated preliminary validation step during idea selection to assess the empirical plausibility of hypotheses within ideas. We evaluate our approach in the social science domain, with a specific focus on climate negotiation topics. Expert evaluation shows that metadata improves the feasibility of generated ideas by 20%, while automated validation improves the overall quality of selected ideas by 7%. Beyond assessing the quality of LLM-generated ideas, we conduct a human study to examine whether these ideas, augmented with related data and preliminary validation, can inspire researchers in their own ideation. Participants report that the LLM-generated ideas and validation are highly useful, and the ideas they propose with such support are proven to be of higher quality than those proposed without assistance. Our findings highlight the potential of data-augmented research ideation and underscore the practical value of LLM-assisted ideation in real-world academic settings.",
+      "links": [
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2505.21396" },
+        { "label": "PDF", "url": "./public/papers/liu-dong-gao-feng-pang-2026-augmenting-research-ideation.pdf" }
       ]
     },
     {
@@ -34,6 +52,7 @@
       "venue": "北大政治学评论",
       "year": 2025,
       "status": "第十九辑",
+      "abstract": "民族主义在现代世界中的作用日益突出。在大多数国家，民族主义的兴起与战争紧密交织，深刻塑造了国内与国际冲突。传统上，民族主义或被理解为战争的副产品，或被视为大众动员的工具。本文则主张，民族主义不仅是战争的催化剂，更是过去两个世纪以来暴力冲突（包括内战与国家间战争）背后的根本性解释因素。基于宏观历史证据，研究识别出冲突的“双波模式”：第一波由帝国主义扩张与大规模征服战争驱动；第二波则源于挑战帝国统治的民族主义运动的兴起，引发分离主义战争与国家间对抗。两个当代案例研究进一步表明，民族国家内部的族群政治排斥如何引发内战，跨境族群纽带又如何触发国家间冲突。文章最后强调，由民族主义引发的战争并非不可避免：权力分享与同化等机制为缓解族群不平等、降低冲突风险提供了可行路径。",
       "links": [
         { "label": "PDF", "url": "./public/papers/wimmer-gao-2025-nationalism-war-translation.pdf" }
       ]
@@ -45,7 +64,7 @@
       "authors": "Xinyang Gao, Weilin Xiao, Songpo Yang",
       "venue": "工作论文",
       "year": 2026,
-      "status": "全文备索",
+      "status": "",
       "abstract": "Voters and political selectors reward candidates who look the part, on a tacit assumption that those who look like able representatives will go on to represent. We argue that this translation is conditional, not automatic. An appearance advantage at selection carries into office only where holding office rewards visible effort. China's Local People's Congresses, whose deputies are indirectly elected and answer upward rather than to voters, are a setting where those incentives are weak. Scoring the faces of nearly five thousand provincial deputies with a deep-learning model that rates them as human observers would, we ask whether favorable facial traits predict the suggestions they file. They do not. Deputies who look more competent, trustworthy, attractive, or aggressive are no more active or responsive than their peers, and the most competent-looking file somewhat fewer. Appearance, we conclude, is an unreliable guide to the substance of representation: voters and selectors who read capability from a face are apt to be misled, whether under open elections or under appointment, and do better to weigh records than looks. The look of a representative is not the work of one.",
       "links": []
     },
@@ -54,21 +73,9 @@
       "authors": "Weilin Xiao, Xinyang Gao",
       "venue": "工作论文",
       "year": 2026,
-      "status": "全文备索",
+      "status": "",
       "abstract": "How do socialist institutional legacies shape the distributional consequences of regime transition? While modernization theory predicts that markets reduce ascriptive inequality, post-communist transitions witness paradoxical regression in female labor force participation. We propose an institutional dependence theory: because gender equality under state socialism was sustained by administrative fiat rather than endogenous development, deeper welfare-state penetration left women dependent on institutional protection and vulnerable to state retreat. We test this argument using China's 1990s marketization reform, leveraging the “Third Front Construction” campaign as a natural experiment for exogenous variation in pre-reform danwei (work unit) intensity. Using difference-in-differences and instrumental variable designs on county-level census data (1982–2000), we find that regions with extensive danwei legacies experienced significantly larger widening of the gender labor gap, driven by discriminatory public-sector displacement and re-familialization of care work, moderated by competing cultural legacies. These findings challenge linear modernization narratives, highlighting how socialist institutional legacies condition the gendered costs of market transition.",
       "links": []
-    },
-    {
-      "title": "Augmenting Research Ideation with Data: An Empirical Investigation in Social Science",
-      "authors": "Xiao Liu, Xinyi Dong, Xinyang Gao, Yansong Feng, Xun Pang",
-      "venue": "arXiv 预印本",
-      "year": 2026,
-      "status": "arXiv:2505.21396",
-      "abstract": "Recent advancements in large language models (LLMs) demonstrate strong potential for generating novel research ideas, yet such ideas often struggle with feasibility and effectiveness. In this paper, we investigate whether augmenting LLMs with relevant data during the ideation process can improve idea quality. Our framework integrates data at two stages: (1) incorporating metadata during idea generation to guide models toward more feasible concepts, and (2) introducing an automated preliminary validation step during idea selection to assess the empirical plausibility of hypotheses within ideas. We evaluate our approach in the social science domain, with a specific focus on climate negotiation topics. Expert evaluation shows that metadata improves the feasibility of generated ideas by 20%, while automated validation improves the overall quality of selected ideas by 7%. Beyond assessing the quality of LLM-generated ideas, we conduct a human study to examine whether these ideas, augmented with related data and preliminary validation, can inspire researchers in their own ideation. Participants report that the LLM-generated ideas and validation are highly useful, and the ideas they propose with such support are proven to be of higher quality than those proposed without assistance. Our findings highlight the potential of data-augmented research ideation and underscore the practical value of LLM-assisted ideation in real-world academic settings.",
-      "links": [
-        { "label": "arXiv", "url": "https://arxiv.org/abs/2505.21396" },
-        { "label": "PDF", "url": "./public/papers/liu-dong-gao-feng-pang-2026-augmenting-research-ideation.pdf" }
-      ]
     }
   ]
 }

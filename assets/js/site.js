@@ -4,6 +4,7 @@ const i18n = {
     nameAlt: "Xinyang Gao",
     title: "博士研究生",
     affiliation: "北京大学",
+    affiliationFull: "北京大学政府管理学院",
     aboutHeading: "个人简介",
     researchHeading: "研究兴趣",
     pubHeading: "发表论文",
@@ -13,6 +14,7 @@ const i18n = {
     linksHeading: "链接",
     emailLabel: "邮箱",
     institutionLabel: "机构",
+    addressLabel: "地址",
     pkuLabel: "北大主页",
     absToggle: "摘要",
     cvLead: "完整简历请见：",
@@ -26,6 +28,7 @@ const i18n = {
     nameAlt: "高昕阳",
     title: "PhD Student",
     affiliation: "Peking University",
+    affiliationFull: "School of Government, Peking University",
     aboutHeading: "About",
     researchHeading: "Research Interests",
     pubHeading: "Publications",
@@ -35,6 +38,7 @@ const i18n = {
     linksHeading: "Links",
     emailLabel: "Email",
     institutionLabel: "Institution",
+    addressLabel: "Address",
     pkuLabel: "PKU Scholar",
     absToggle: "Abstract",
     cvLead: "My full curriculum vitae is available here:",
@@ -77,7 +81,7 @@ function highlightSelf(authors) {
   return out;
 }
 
-/* ── Render ── */
+/* ── Shared rendering ── */
 function renderText(lang) {
   document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
   const t = i18n[lang];
@@ -86,53 +90,86 @@ function renderText(lang) {
     if (key && t[key]) el.textContent = t[key];
   });
 
-  // Alternate name in hero and nav brand
-  document.getElementById("hero-name-alt").textContent = t.nameAlt;
-  document.getElementById("brand-alt").textContent = t.nameAlt;
+  document.querySelectorAll(".js-name-alt").forEach((el) => {
+    el.textContent = t.nameAlt;
+  });
 
-  // Lang toggle button
-  document.getElementById("lang-toggle").textContent = lang === "zh" ? "EN" : "中文";
+  document.querySelectorAll(".js-lang-toggle").forEach((btn) => {
+    btn.textContent = lang === "zh" ? "EN" : "中文";
+  });
+
+  const footerYear = document.getElementById("footer-year");
+  if (footerYear) footerYear.textContent = new Date().getFullYear();
+  const footerName = document.getElementById("footer-name");
+  if (footerName) footerName.textContent = t.name;
 }
 
-function renderProfile(profile, lang) {
-  // Bio: accepts a string or an array of paragraphs.
-  const paragraphs = Array.isArray(profile.about) ? profile.about : [profile.about];
-  document.getElementById("about-text").innerHTML = paragraphs
-    .map((p) => `<p>${p}</p>`)
-    .join("");
-
-  document.getElementById("institution-text").textContent = profile.affiliation;
-
-  const emailLink = document.getElementById("email-link");
-  emailLink.href = `mailto:${profile.email}`;
-  emailLink.textContent = profile.email;
-  document.getElementById("link-email").href = `mailto:${profile.email}`;
-
-  const cvLink = document.getElementById("cv-link");
-  cvLink.href = profile.cv;
-  cvLink.textContent = i18n[lang].cvButton;
-
-  document.getElementById("research-list").innerHTML = profile.researchInterests
-    .map((item) => `<li>${escapeHtml(item)}</li>`)
-    .join("");
-
-  // Contact links (inline)
-  document.getElementById("external-links-inline").innerHTML = profile.externalLinks
-    .map(
-      (item) =>
-        `<a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.name)}</a>`
-    )
-    .join("");
-
-  // About icon row from profile
-  profile.externalLinks.forEach((link) => {
-    const n = link.name.toLowerCase();
-    if (n.includes("google scholar")) document.getElementById("link-scholar").href = link.url;
-    if (n.includes("researchgate")) document.getElementById("link-researchgate").href = link.url;
-    if (n.includes("pku") || n.includes("北大")) document.getElementById("link-pku").href = link.url;
+function markActiveNav() {
+  const page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  document.querySelectorAll(".nav-links a").forEach((a) => {
+    const href = (a.getAttribute("href") || "").toLowerCase();
+    if (href.includes(page) && page !== "index.html") a.classList.add("active");
   });
 }
 
+/* ── Profile-driven sections (guarded per page) ── */
+function renderProfile(profile, lang) {
+  const aboutText = document.getElementById("about-text");
+  if (aboutText) {
+    const paragraphs = Array.isArray(profile.about) ? profile.about : [profile.about];
+    aboutText.innerHTML = paragraphs.map((p) => `<p>${p}</p>`).join("");
+  }
+
+  const institution = document.getElementById("institution-text");
+  if (institution) institution.textContent = profile.affiliation;
+
+  const address = document.getElementById("address-text");
+  if (address && profile.address) address.textContent = profile.address;
+
+  const emailLink = document.getElementById("email-link");
+  if (emailLink) {
+    emailLink.href = `mailto:${profile.email}`;
+    emailLink.textContent = profile.email;
+  }
+  const iconEmail = document.getElementById("link-email");
+  if (iconEmail) iconEmail.href = `mailto:${profile.email}`;
+
+  const cvLink = document.getElementById("cv-link");
+  if (cvLink) {
+    cvLink.href = profile.cv;
+    cvLink.textContent = i18n[lang].cvButton;
+  }
+
+  const researchList = document.getElementById("research-list");
+  if (researchList) {
+    researchList.innerHTML = profile.researchInterests
+      .map((item) => `<li>${escapeHtml(item)}</li>`)
+      .join("");
+  }
+
+  const linksInline = document.getElementById("external-links-inline");
+  if (linksInline) {
+    linksInline.innerHTML = profile.externalLinks
+      .map(
+        (item) =>
+          `<a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.name)}</a>`
+      )
+      .join("");
+  }
+
+  profile.externalLinks.forEach((link) => {
+    const n = link.name.toLowerCase();
+    const set = (id) => {
+      const el = document.getElementById(id);
+      if (el) el.href = link.url;
+    };
+    if (n.includes("google scholar")) set("link-scholar");
+    if (n.includes("researchgate")) set("link-researchgate");
+    if (n.includes("pku") || n.includes("北大")) set("link-pku");
+  });
+}
+
+/* ── Publications ── */
 function renderAuthors(authors, authorLinks) {
   let out = highlightSelf(authors);
   Object.entries(authorLinks || {}).forEach(([name, url]) => {
@@ -177,7 +214,6 @@ function renderPapers(data, lang) {
     .map((p) => paperItem(p, lang, links))
     .join("");
 
-  // Abstract toggles
   document.querySelectorAll(".abs-toggle").forEach((btn) => {
     btn.addEventListener("click", () => {
       const panel = btn.closest("li").querySelector(".paper-abstract");
@@ -204,13 +240,16 @@ function toggleTheme() {
 
 function updateThemeIcon() {
   const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-  const icon = isDark ? "☀" : "☾"; // ☀ or ☾
-  document.querySelector("#theme-toggle .theme-icon").textContent = icon;
+  const icon = isDark ? "☀" : "☾";
+  document.querySelectorAll(".js-theme-toggle .theme-icon").forEach((el) => {
+    el.textContent = icon;
+  });
 }
 
 /* ── Nav shadow on scroll ── */
 function initNavScroll() {
   const nav = document.getElementById("topnav");
+  if (!nav) return;
   const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 10);
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -236,6 +275,7 @@ function initFadeIn() {
 async function bootstrap() {
   updateThemeIcon();
   initNavScroll();
+  markActiveNav();
 
   const local = localStorage.getItem("lang");
   const query = readQueryLang();
@@ -243,29 +283,34 @@ async function bootstrap() {
 
   renderText(lang);
 
+  const needsProfile =
+    document.getElementById("about-text") ||
+    document.getElementById("email-link") ||
+    document.getElementById("cv-link");
+  const needsPapers = document.getElementById("publications-list");
+
   const [profile, papers] = await Promise.all([
-    loadJson(`./content/${lang}/profile.json`),
-    loadJson(`./content/${lang}/publications.json`),
+    needsProfile ? loadJson(`./content/${lang}/profile.json`) : null,
+    needsPapers ? loadJson(`./content/${lang}/publications.json`) : null,
   ]);
 
-  renderProfile(profile, lang);
-  renderPapers(papers, lang);
+  if (profile) renderProfile(profile, lang);
+  if (papers) renderPapers(papers, lang);
 
-  // Footer
-  document.getElementById("footer-year").textContent = new Date().getFullYear();
-  document.getElementById("footer-name").textContent = i18n[lang].name;
-
-  // Lang toggle
-  document.getElementById("lang-toggle").addEventListener("click", () => {
-    const next = lang === "en" ? "zh" : "en";
-    localStorage.setItem("lang", next);
-    const nextUrl = new URL(window.location.href);
-    nextUrl.searchParams.set("lang", next);
-    window.location.href = nextUrl.toString();
+  // Language toggle: stay on the current page
+  document.querySelectorAll(".js-lang-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const next = lang === "en" ? "zh" : "en";
+      localStorage.setItem("lang", next);
+      const nextUrl = new URL(window.location.href);
+      nextUrl.searchParams.set("lang", next);
+      window.location.href = nextUrl.toString();
+    });
   });
 
-  // Theme toggle
-  document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+  document.querySelectorAll(".js-theme-toggle").forEach((btn) => {
+    btn.addEventListener("click", toggleTheme);
+  });
 
   initFadeIn();
 }

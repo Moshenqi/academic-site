@@ -8,16 +8,23 @@ so day-to-day maintenance never touches HTML/CSS/JS.
 ## Structure
 
 ```
-index.html              page skeleton (edit rarely)
+index.html              cover page (full-screen photo + entry nav)
+about.html              bio, research interests, links, talk photo
+publications.html       publications + working papers
+cv.html                 CV download
+contact.html            contact info
 assets/css/style.css    design: colors, typography, layout
 assets/js/site.js       rendering, language switch, dark mode, UI labels (i18n)
-assets/img/             banner.jpg (hero), portrait.jpg (about), talk.jpg (moment)
+assets/img/             banner.jpg (cover/banners), portrait.jpg, talk.jpg
 content/en/*.json       English content  ← edit these
 content/zh/*.json       Chinese content  ← edit these
 public/cv/              cv-en.pdf, cv-zh.pdf
 public/papers/          paper PDFs hosted on the site
 vercel.json             static deployment config
 ```
+
+All five pages share the same nav/footer markup and are rendered by
+`site.js` from the JSON files — routine updates never touch HTML.
 
 ## How to update content (the common cases)
 
@@ -66,9 +73,9 @@ Replace `public/cv/cv-en.pdf` and `public/cv/cv-zh.pdf` (keep the filenames).
 ### Replace photos
 
 Overwrite files in `assets/img/` (keep the filenames):
-- `banner.jpg` — hero image (~1500px wide is plenty)
-- `portrait.jpg` — headshot (~800px)
-- `talk.jpg` — the captioned photo before the CV section
+- `banner.jpg` — cover page + page-top banners (~1500px wide is plenty)
+- `portrait.jpg` — headshot on the About page (~800px)
+- `talk.jpg` — the captioned photo on the About page
 
 Tip (macOS) to compress a large photo before committing:
 
