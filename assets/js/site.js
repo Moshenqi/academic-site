@@ -233,6 +233,63 @@ function renderPapers(data, lang) {
   });
 }
 
+/* ── Map (Leaflet + CARTO minimalist tiles) ── */
+const PKU_COORDS = [39.9921, 116.3046];
+let mapTiles = null;
+let mapMarker = null;
+
+function isDarkTheme() {
+  return document.documentElement.getAttribute("data-theme") === "dark";
+}
+
+function mapTileUrl() {
+  return `https://{s}.basemaps.cartocdn.com/${isDarkTheme() ? "dark_all" : "light_all"}/{z}/{x}/{y}{r}.png`;
+}
+
+function mapAccentColor() {
+  return getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
+}
+
+function initMapEmbed(lang) {
+  const el = document.getElementById("map");
+  if (!el || typeof L === "undefined") return;
+
+  const map = L.map(el, {
+    center: PKU_COORDS,
+    zoom: 14,
+    scrollWheelZoom: false,
+    attributionControl: true,
+  });
+  map.attributionControl.setPrefix(false);
+
+  mapTiles = L.tileLayer(mapTileUrl(), {
+    subdomains: "abcd",
+    maxZoom: 19,
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>',
+  }).addTo(map);
+
+  mapMarker = L.circleMarker(PKU_COORDS, {
+    radius: 9,
+    color: "#ffffff",
+    weight: 2.5,
+    fillColor: mapAccentColor(),
+    fillOpacity: 1,
+  }).addTo(map);
+
+  mapMarker.bindPopup(
+    lang === "zh"
+      ? "<strong>北京大学政府管理学院</strong><br>北京市海淀区颐和园路5号"
+      : "<strong>School of Government</strong><br>Peking University, Beijing",
+    { closeButton: false }
+  );
+}
+
+function refreshMapTheme() {
+  if (mapTiles) mapTiles.setUrl(mapTileUrl());
+  if (mapMarker) mapMarker.setStyle({ fillColor: mapAccentColor() });
+}
+
 /* ── Dark mode ── */
 function toggleTheme() {
   const isDark = document.documentElement.getAttribute("data-theme") === "dark";
@@ -244,6 +301,7 @@ function toggleTheme() {
     localStorage.setItem("theme", "dark");
   }
   updateThemeIcon();
+  refreshMapTheme();
 }
 
 function updateThemeIcon() {
@@ -291,12 +349,7 @@ async function bootstrap() {
 
   renderText(lang);
 
-  // Map embed follows the page language
-  const mapFrame = document.getElementById("map-frame");
-  if (mapFrame) {
-    const hl = lang === "zh" ? "zh-CN" : "en";
-    mapFrame.src = `https://www.google.com/maps?q=Peking+University,+Haidian+District,+Beijing,+China&hl=${hl}&z=15&output=embed`;
-  }
+  initMapEmbed(lang);
 
   const needsProfile =
     document.getElementById("about-text") ||
