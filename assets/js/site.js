@@ -20,6 +20,7 @@ const i18n = {
     corrNote: "* 通讯作者",
     coverRole: "政治学博士研究生",
     coverAffil: "北京大学政府管理学院",
+    mapLink: "在 Google 地图中查看",
     cvLead: "完整简历请见：",
     cvButton: "下载简历（PDF）",
     heroCredit: "新安江水电站 —— 新中国第一座自主设计建设的大型水电站 · 作者摄于 2024 年 1 月",
@@ -47,6 +48,7 @@ const i18n = {
     corrNote: "* Corresponding author",
     coverRole: "Ph.D. Student in Political Science",
     coverAffil: "School of Government, Peking University",
+    mapLink: "View on Google Maps",
     cvLead: "My full curriculum vitae is available here:",
     cvButton: "Download CV (PDF)",
     heroCredit:
@@ -288,6 +290,13 @@ async function bootstrap() {
   const lang = query || local || "en";
 
   renderText(lang);
+
+  // Map embed follows the page language
+  const mapFrame = document.getElementById("map-frame");
+  if (mapFrame) {
+    const hl = lang === "zh" ? "zh-CN" : "en";
+    mapFrame.src = `https://www.google.com/maps?q=Peking+University,+Haidian+District,+Beijing,+China&hl=${hl}&z=15&output=embed`;
+  }
 
   const needsProfile =
     document.getElementById("about-text") ||
