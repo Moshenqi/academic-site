@@ -54,6 +54,9 @@ Always edit **both** `content/en/` and `content/zh/` so the two languages stay i
 
 Notes:
 - Your name ("Xinyang Gao" / "高昕阳") is **bolded automatically** in author lists.
+- Mark corresponding authors by appending `*` to the name in `authors`
+  (e.g. `"Wenhui Yang, Xinyang Gao*"`); the "* Corresponding author"
+  footnote on the Publications page is fixed text.
 - `abstract` is optional — when present, an "Abstract / 摘要" toggle appears.
 - `links` can hold several items (PDF, DOI, Appendix, Replication, ...); `[]` for none.
 - `status` is optional free text (volume/pages, "Forthcoming", "R&R", ...).

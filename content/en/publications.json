@@ -10,7 +10,7 @@
   "publications": [
     {
       "title": "The Overrepresented Winner? Ethnic Minority Legislators in China's National People's Congress",
-      "authors": "Wenhui Yang, Xinyang Gao",
+      "authors": "Wenhui Yang, Xinyang Gao*",
       "venue": "The China Quarterly",
       "year": 2026,
       "status": "265: 235–246",
@@ -22,7 +22,7 @@
     },
     {
       "title": "Augmenting Research Ideation with Data: An Empirical Investigation in Social Science",
-      "authors": "Xiao Liu, Xinyi Dong, Xinyang Gao, Yansong Feng, Xun Pang",
+      "authors": "Xiao Liu, Xinyi Dong, Xinyang Gao, Yansong Feng*, Xun Pang*",
       "venue": "AI4Science Workshop at NeurIPS",
       "year": 2025,
       "status": "Spotlight",
@@ -34,7 +34,7 @@
     },
     {
       "title": "Can the Opening of High-Speed Rail Promote Household Multidimensional Relative Poverty Alleviation?",
-      "authors": "Yaning Hu, Haiyan Lu, Hao Chai, Xinyang Gao",
+      "authors": "Yaning Hu, Haiyan Lu*, Hao Chai, Xinyang Gao",
       "venue": "Journal of Transport Geography",
       "year": 2025,
       "status": "128: 104371",
@@ -59,7 +59,7 @@
   "workingPapers": [
     {
       "title": "Looks Like a Representative? Facial Appearances and Legislative Performance in China",
-      "authors": "Xinyang Gao, Weilin Xiao, Songpo Yang",
+      "authors": "Xinyang Gao, Weilin Xiao, Songpo Yang*",
       "venue": "Working Paper",
       "year": 2026,
       "status": "",
@@ -68,7 +68,7 @@
     },
     {
       "title": "“Iron Girls” Go Home: Socialist Institutional Legacies and the Gendered Costs of Market Transition in China",
-      "authors": "Weilin Xiao, Xinyang Gao",
+      "authors": "Weilin Xiao, Xinyang Gao*",
       "venue": "Working Paper",
       "year": 2026,
       "status": "",
