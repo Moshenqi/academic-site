@@ -318,28 +318,6 @@ p { margin: 0 0 0.9rem; }
 .icon-row a:hover { color: var(--accent); }
 .icon-row svg { flex-shrink: 0; }
 
-/* ── News ── */
-.news-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.news-list li {
-  display: grid;
-  grid-template-columns: 6.2rem 1fr;
-  gap: 1rem;
-  padding: 0.55rem 0;
-  border-bottom: 1px dashed var(--line);
-}
-.news-list li:last-child { border-bottom: none; }
-.news-date {
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-variant-numeric: tabular-nums;
-  padding-top: 0.1rem;
-}
-.news-text { font-size: 0.97rem; }
-
 /* ── Publications ── */
 .paper-list {
   margin: 0;
@@ -412,6 +390,43 @@ p { margin: 0 0 0.9rem; }
 .paper-links a:hover {
   border-color: var(--accent);
   background: var(--accent-tint);
+}
+
+/* Abstract toggle button — styled like a link pill */
+.abs-toggle {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0 0.5rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 1.5;
+  background: none;
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+.abs-toggle:hover,
+.abs-toggle.open {
+  border-color: var(--accent);
+  background: var(--accent-tint);
+}
+
+.paper-abstract {
+  margin-top: 0.7rem;
+  padding: 0.75rem 1rem;
+  border-left: 2px solid var(--accent);
+  background: var(--accent-tint);
+  border-radius: 0 6px 6px 0;
+}
+.paper-abstract p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text);
+  text-align: justify;
 }
 
 /* ── Moment photo ── */

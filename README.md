@@ -15,6 +15,7 @@ assets/img/             banner.jpg (hero), portrait.jpg (about), talk.jpg (momen
 content/en/*.json       English content  ← edit these
 content/zh/*.json       Chinese content  ← edit these
 public/cv/              cv-en.pdf, cv-zh.pdf
+public/papers/          paper PDFs hosted on the site
 vercel.json             static deployment config
 ```
 
@@ -24,33 +25,34 @@ Always edit **both** `content/en/` and `content/zh/` so the two languages stay i
 
 ### Add a publication or working paper
 
-Edit `content/en/publications.json` and `content/zh/publications.json`.
-Add an entry to `publications` or `workingPapers`:
+1. (Optional) Drop the PDF into `public/papers/` with a short kebab-case name,
+   e.g. `gao-2027-some-paper.pdf`.
+2. Edit `content/en/publications.json` **and** `content/zh/publications.json`.
+   Add an entry to `publications` or `workingPapers` (newest first):
 
 ```json
 {
   "title": "Paper Title",
   "authors": "Coauthor Name, Xinyang Gao",
   "venue": "Journal Name",
-  "year": 2026,
-  "status": "Forthcoming",
-  "links": [{ "label": "PDF", "url": "https://..." }]
+  "year": 2027,
+  "status": "265: 235–246",
+  "abstract": "One-paragraph abstract shown behind the Abstract toggle...",
+  "links": [
+    { "label": "PDF", "url": "./public/papers/gao-2027-some-paper.pdf" },
+    { "label": "DOI", "url": "https://doi.org/..." }
+  ]
 }
 ```
 
 Notes:
 - Your name ("Xinyang Gao" / "高昕阳") is **bolded automatically** in author lists.
-- `links` can hold several items (PDF, Appendix, Replication, ...); leave `[]` for none.
-- `status` is optional free text (e.g. "First Online", "Vol. 128", "R&R").
-
-### Add a news item
-
-Edit `news` in `content/{en,zh}/profile.json`. Newest first. `text` may contain
-simple HTML (`<em>`, `<a>`):
-
-```json
-{ "date": "2026-06", "text": "Presented at <em>XYZ Conference</em>." }
-```
+- `abstract` is optional — when present, an "Abstract / 摘要" toggle appears.
+- `links` can hold several items (PDF, DOI, Appendix, Replication, ...); `[]` for none.
+- `status` is optional free text (volume/pages, "Forthcoming", "R&R", ...).
+- To link a coauthor's homepage, add their exact name to the `authorLinks` map
+  at the top of both publications.json files:
+  `"authorLinks": { "Weilin Xiao": "https://xwl822.github.io/" }`.
 
 ### Update bio / research interests / links
 

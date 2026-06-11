@@ -1,16 +1,19 @@
 {
+  "authorLinks": {
+    "Weilin Xiao": "https://xwl822.github.io/",
+    "Songpo Yang": "https://www.songpoyang.com/"
+  },
   "publications": [
     {
       "title": "The Overrepresented Winner? Ethnic Minority Legislators in China's National People's Congress",
       "authors": "Wenhui Yang, Xinyang Gao",
       "venue": "The China Quarterly",
-      "year": 2025,
-      "status": "First Online",
+      "year": 2026,
+      "status": "265: 235–246",
+      "abstract": "描述性代表比例的提升是否会增强实质性代表效果？在全球范围内，少数民族在立法机构中通常处于代表性不足的状态。但在中国全国人民代表大会中，少数民族却呈现“超额代表”的特征。本文发现，这种“超额代表”并未转化为更强的实质性代表效果。与汉族代表相比，少数民族代表提出议案的活跃度更低，在提交政策建议方面并无显著差异，且在民族议题上表现得较为谨慎。在代表团内征集足够签名以提出议案，以及在跨代表团间构建政策联盟时，少数民族代表面临诸多挑战。代表团内部的民族多样性可能削弱其推动政策议程的能力。我们的发现表明，制度性约束与集体行动困境可能阻碍了少数民族代表实质性代表的实现。",
       "links": [
-        {
-          "label": "PDF",
-          "url": "https://www.cambridge.org/core/journals/china-quarterly/article/abs/overrepresented-winner-ethnic-minority-legislators-in-chinas-national-peoples-congress/2885E5428462F16E4B1AAD5DB1CAFF38"
-        }
+        { "label": "PDF", "url": "./public/papers/yang-gao-2026-overrepresented-winner-cq.pdf" },
+        { "label": "DOI", "url": "https://doi.org/10.1017/S0305741025101690" }
       ]
     },
     {
@@ -18,35 +21,53 @@
       "authors": "Yaning Hu, Haiyan Lu, Hao Chai, Xinyang Gao",
       "venue": "Journal of Transport Geography",
       "year": 2025,
-      "status": "Vol. 128",
+      "status": "128: 104371",
+      "abstract": "Addressing poverty is paramount, aligning with the first Sustainable Development Goal focused on eradicating poverty in all its forms. While the effects of high-speed rail (HSR) on absolute poverty have been documented, its impact on relative poverty remains understudied. This paper examines the influence of HSR on household relative poverty in China through a quasi-experimental design. The main results are as follows: (1) The opening of HSR significantly reduced the household relative poverty by approximately 1.8%. (2) This alleviation effect primarily transpires through the expansion of economic activities and employment opportunities. (3) Notably, the impact of HSR is more pronounced in lower-ranked, smaller cities and in the western regions of China. Moreover, households with migrant workers or those engaged in non-agricultural sectors derive greater benefits from HSR developments. Our results suggest that HSR opening could have contributed to China's relative poverty alleviation.",
       "links": [
-        {
-          "label": "PDF",
-          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0966692325002625"
-        }
+        { "label": "PDF", "url": "./public/papers/hu-lu-chai-gao-2025-hsr-poverty-jtg.pdf" },
+        { "label": "DOI", "url": "https://doi.org/10.1016/j.jtrangeo.2025.104371" }
       ]
     },
     {
       "title": "民族主义与战争：宏观比较的视角",
-      "authors": "安德烈亚斯·威默，高昕阳（译）, 杨端程（校）",
+      "authors": "安德烈亚斯·威默，高昕阳（译），杨端程（校）",
       "venue": "北大政治学评论",
       "year": 2025,
       "status": "第十九辑",
-      "links": []
+      "links": [
+        { "label": "PDF", "url": "./public/papers/wimmer-gao-2025-nationalism-war-translation.pdf" }
+      ]
     }
   ],
   "workingPapers": [
     {
-      "title": "Improving Research Idea Generation Through Data: An Empirical Investigation in Social Science",
-      "authors": "Xiao Liu, Xinyi Dong, Xinyang Gao, Yansong Feng, Xun Pang",
-      "venue": "Arxiv",
+      "title": "Looks Like a Representative? Facial Appearances and Legislative Performance in China",
+      "authors": "Xinyang Gao, Weilin Xiao, Songpo Yang",
+      "venue": "工作论文",
       "year": 2026,
-      "status": "Working Paper",
+      "status": "全文备索",
+      "abstract": "Voters and political selectors reward candidates who look the part, on a tacit assumption that those who look like able representatives will go on to represent. We argue that this translation is conditional, not automatic. An appearance advantage at selection carries into office only where holding office rewards visible effort. China's Local People's Congresses, whose deputies are indirectly elected and answer upward rather than to voters, are a setting where those incentives are weak. Scoring the faces of nearly five thousand provincial deputies with a deep-learning model that rates them as human observers would, we ask whether favorable facial traits predict the suggestions they file. They do not. Deputies who look more competent, trustworthy, attractive, or aggressive are no more active or responsive than their peers, and the most competent-looking file somewhat fewer. Appearance, we conclude, is an unreliable guide to the substance of representation: voters and selectors who read capability from a face are apt to be misled, whether under open elections or under appointment, and do better to weigh records than looks. The look of a representative is not the work of one.",
+      "links": []
+    },
+    {
+      "title": "“Iron Girls” Go Home: Socialist Institutional Legacies and the Gendered Costs of Market Transition in China",
+      "authors": "Weilin Xiao, Xinyang Gao",
+      "venue": "工作论文",
+      "year": 2026,
+      "status": "全文备索",
+      "abstract": "How do socialist institutional legacies shape the distributional consequences of regime transition? While modernization theory predicts that markets reduce ascriptive inequality, post-communist transitions witness paradoxical regression in female labor force participation. We propose an institutional dependence theory: because gender equality under state socialism was sustained by administrative fiat rather than endogenous development, deeper welfare-state penetration left women dependent on institutional protection and vulnerable to state retreat. We test this argument using China's 1990s marketization reform, leveraging the “Third Front Construction” campaign as a natural experiment for exogenous variation in pre-reform danwei (work unit) intensity. Using difference-in-differences and instrumental variable designs on county-level census data (1982–2000), we find that regions with extensive danwei legacies experienced significantly larger widening of the gender labor gap, driven by discriminatory public-sector displacement and re-familialization of care work, moderated by competing cultural legacies. These findings challenge linear modernization narratives, highlighting how socialist institutional legacies condition the gendered costs of market transition.",
+      "links": []
+    },
+    {
+      "title": "Augmenting Research Ideation with Data: An Empirical Investigation in Social Science",
+      "authors": "Xiao Liu, Xinyi Dong, Xinyang Gao, Yansong Feng, Xun Pang",
+      "venue": "arXiv 预印本",
+      "year": 2026,
+      "status": "arXiv:2505.21396",
+      "abstract": "Recent advancements in large language models (LLMs) demonstrate strong potential for generating novel research ideas, yet such ideas often struggle with feasibility and effectiveness. In this paper, we investigate whether augmenting LLMs with relevant data during the ideation process can improve idea quality. Our framework integrates data at two stages: (1) incorporating metadata during idea generation to guide models toward more feasible concepts, and (2) introducing an automated preliminary validation step during idea selection to assess the empirical plausibility of hypotheses within ideas. We evaluate our approach in the social science domain, with a specific focus on climate negotiation topics. Expert evaluation shows that metadata improves the feasibility of generated ideas by 20%, while automated validation improves the overall quality of selected ideas by 7%. Beyond assessing the quality of LLM-generated ideas, we conduct a human study to examine whether these ideas, augmented with related data and preliminary validation, can inspire researchers in their own ideation. Participants report that the LLM-generated ideas and validation are highly useful, and the ideas they propose with such support are proven to be of higher quality than those proposed without assistance. Our findings highlight the potential of data-augmented research ideation and underscore the practical value of LLM-assisted ideation in real-world academic settings.",
       "links": [
-        {
-          "label": "PDF",
-          "url": "https://arxiv.org/abs/2505.21396"
-        }
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2505.21396" },
+        { "label": "PDF", "url": "./public/papers/liu-dong-gao-feng-pang-2026-augmenting-research-ideation.pdf" }
       ]
     }
   ]

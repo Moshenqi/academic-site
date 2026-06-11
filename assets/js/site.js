@@ -5,7 +5,6 @@ const i18n = {
     title: "博士研究生",
     affiliation: "北京大学",
     aboutHeading: "个人简介",
-    newsHeading: "近况",
     researchHeading: "研究兴趣",
     pubHeading: "发表论文",
     wpHeading: "工作论文",
@@ -15,6 +14,7 @@ const i18n = {
     emailLabel: "邮箱",
     institutionLabel: "机构",
     pkuLabel: "北大主页",
+    absToggle: "摘要",
     cvLead: "完整简历请见：",
     cvButton: "下载简历（PDF）",
     heroCredit: "新安江水电站 —— 新中国第一座自主设计建设的大型水电站 · 作者摄于 2024 年 1 月",
@@ -27,7 +27,6 @@ const i18n = {
     title: "PhD Student",
     affiliation: "Peking University",
     aboutHeading: "About",
-    newsHeading: "News",
     researchHeading: "Research Interests",
     pubHeading: "Publications",
     wpHeading: "Working Papers",
@@ -37,6 +36,7 @@ const i18n = {
     emailLabel: "Email",
     institutionLabel: "Institution",
     pkuLabel: "PKU Scholar",
+    absToggle: "Abstract",
     cvLead: "My full curriculum vitae is available here:",
     cvButton: "Download CV (PDF)",
     heroCredit:
@@ -116,15 +116,6 @@ function renderProfile(profile, lang) {
     .map((item) => `<li>${escapeHtml(item)}</li>`)
     .join("");
 
-  // News
-  const newsList = document.getElementById("news-list");
-  newsList.innerHTML = (profile.news || [])
-    .map(
-      (item) =>
-        `<li><span class="news-date">${escapeHtml(item.date)}</span><span class="news-text">${item.text}</span></li>`
-    )
-    .join("");
-
   // Contact links (inline)
   document.getElementById("external-links-inline").innerHTML = profile.externalLinks
     .map(
@@ -142,30 +133,60 @@ function renderProfile(profile, lang) {
   });
 }
 
-function paperItem(paper) {
-  const links =
-    paper.links && paper.links.length
-      ? `<span class="paper-links">${paper.links
-          .map(
-            (l) => `<a href="${l.url}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`
-          )
-          .join("")}</span>`
-      : "";
+function renderAuthors(authors, authorLinks) {
+  let out = highlightSelf(authors);
+  Object.entries(authorLinks || {}).forEach(([name, url]) => {
+    out = out.replaceAll(
+      escapeHtml(name),
+      `<a href="${url}" target="_blank" rel="noopener">${escapeHtml(name)}</a>`
+    );
+  });
+  return out;
+}
+
+function paperItem(paper, lang, authorLinks) {
+  const linkItems = (paper.links || []).map(
+    (l) => `<a href="${l.url}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`
+  );
+  if (paper.abstract) {
+    linkItems.unshift(
+      `<button type="button" class="abs-toggle" aria-expanded="false">${i18n[lang].absToggle}</button>`
+    );
+  }
+  const links = linkItems.length
+    ? `<span class="paper-links">${linkItems.join("")}</span>`
+    : "";
   const status = paper.status ? `, ${escapeHtml(paper.status)}` : "";
+  const abstract = paper.abstract
+    ? `<div class="paper-abstract" hidden><p>${escapeHtml(paper.abstract)}</p></div>`
+    : "";
   return `<li>
     <div class="paper-title">${escapeHtml(paper.title)}</div>
-    <div class="paper-authors">${highlightSelf(paper.authors)}</div>
+    <div class="paper-authors">${renderAuthors(paper.authors, authorLinks)}</div>
     <div class="paper-venue"><em>${escapeHtml(paper.venue)}</em>, ${paper.year}${status}${links}</div>
+    ${abstract}
   </li>`;
 }
 
-function renderPapers(data) {
+function renderPapers(data, lang) {
+  const links = data.authorLinks || {};
   document.getElementById("publications-list").innerHTML = data.publications
-    .map(paperItem)
+    .map((p) => paperItem(p, lang, links))
     .join("");
   document.getElementById("working-papers-list").innerHTML = data.workingPapers
-    .map(paperItem)
+    .map((p) => paperItem(p, lang, links))
     .join("");
+
+  // Abstract toggles
+  document.querySelectorAll(".abs-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const panel = btn.closest("li").querySelector(".paper-abstract");
+      const open = panel.hasAttribute("hidden");
+      panel.toggleAttribute("hidden", !open);
+      btn.setAttribute("aria-expanded", String(open));
+      btn.classList.toggle("open", open);
+    });
+  });
 }
 
 /* ── Dark mode ── */
@@ -228,7 +249,7 @@ async function bootstrap() {
   ]);
 
   renderProfile(profile, lang);
-  renderPapers(papers);
+  renderPapers(papers, lang);
 
   // Footer
   document.getElementById("footer-year").textContent = new Date().getFullYear();
