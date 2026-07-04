@@ -5,7 +5,8 @@
     "Wenhui Yang": "https://wenhuiyang.weebly.com/",
     "Duancheng Yang": "https://dcyeo.github.io/",
     "Andreas Wimmer": "https://www.awimmer.com/",
-    "Xiao Liu": "https://xxxiaol.github.io/"
+    "Xiao Liu": "https://xxxiaol.github.io/",
+    "Yanjun Liu": "https://sites.google.com/view/yanjunliu/home?authuser=0"
   },
   "publications": [
     {
@@ -45,6 +46,15 @@
     }
   ],
   "workingPapers": [
+    {
+      "title": "Unpacking the Psychology of Political Consumerism in China: A Survey Experiment",
+      "authors": "Xinyang Gao, Yanjun Liu",
+      "venue": "Working Paper",
+      "year": 2026,
+      "status": "",
+      "abstract": "Political consumerism refers to consumers’ intentional purchase or avoidance of products and brands for political, social, or ethical reasons. Most research treats it as directed outward: consumers boycott firms they oppose and buycott firms they endorse. This article asks whether national identity can also turn political consumerism inward, making domestic brands vulnerable when they appear to misuse patriotic sentiment. We argue that national attachment gives domestic brands an initial advantage but also binds them to the standards that make domestic status valuable. In an online survey experiment in China with matched fictional domestic and foreign apparel brands, respondents strongly favored the domestic brand at baseline, yet negative news about the domestic brand produced the largest shift toward the foreign alternative. The same condition raised anger and anxiety and reduced pride, and consumer ethnocentrism partly buffered the shift away from the domestic brand. This pattern suggests that consumers read a domestic firm’s misuse of patriotic sentiment as an identity violation, not merely poor corporate conduct. Brand nationality thus changes how consumers interpret political news: national identity can discipline domestic firms as well as mobilize consumers against outsiders.",
+      "links": []
+    },
     {
       "title": "Augmenting Research Ideation with Data: An Empirical Investigation in Social Science",
       "authors": "Xiao Liu, Xinyi Dong, Xinyang Gao, Yansong Feng*, Xun Pang*",
