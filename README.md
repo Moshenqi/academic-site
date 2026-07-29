@@ -45,6 +45,7 @@ Always edit **both** `content/en/` and `content/zh/` so the two languages stay i
   "year": 2027,
   "status": "265: 235–246",
   "abstract": "One-paragraph abstract shown behind the Abstract toggle...",
+  "keywords": ["keyword one", "keyword two"],
   "links": [
     { "label": "PDF", "url": "./public/papers/gao-2027-some-paper.pdf" },
     { "label": "DOI", "url": "https://doi.org/..." }
@@ -58,6 +59,7 @@ Notes:
   (e.g. `"Wenhui Yang, Xinyang Gao*"`); the "* Corresponding author"
   footnote on the Publications page is fixed text.
 - `abstract` is optional — when present, an "Abstract / 摘要" toggle appears.
+- `keywords` is optional — when present, keywords appear below the expanded abstract.
 - `links` can hold several items (PDF, DOI, Appendix, Replication, ...); `[]` for none.
 - `status` is optional free text (volume/pages, "Forthcoming", "R&R", ...).
 - To link a coauthor's homepage, add their exact name to the `authorLinks` map

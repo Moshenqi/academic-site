@@ -17,6 +17,7 @@ const i18n = {
     addressLabel: "地址",
     pkuLabel: "北大主页",
     absToggle: "摘要",
+    keywordsLabel: "关键词",
     corrNote: "* 通讯作者",
     coverRole: "政治学博士研究生",
     coverAffil: "北京大学政府管理学院",
@@ -45,6 +46,7 @@ const i18n = {
     addressLabel: "Address",
     pkuLabel: "PKU Scholar",
     absToggle: "Abstract",
+    keywordsLabel: "Keywords",
     corrNote: "* Corresponding author",
     coverRole: "Ph.D. Student in Political Science",
     coverAffil: "School of Government, Peking University",
@@ -202,8 +204,14 @@ function paperItem(paper, lang, authorLinks) {
     ? `<span class="paper-links">${linkItems.join("")}</span>`
     : "";
   const status = paper.status ? `, ${escapeHtml(paper.status)}` : "";
+  const keywords = Array.isArray(paper.keywords)
+    ? paper.keywords.join("; ")
+    : paper.keywords;
+  const keywordsHtml = keywords
+    ? `<p class="paper-keywords"><strong>${i18n[lang].keywordsLabel}:</strong> ${escapeHtml(keywords)}</p>`
+    : "";
   const abstract = paper.abstract
-    ? `<div class="paper-abstract" hidden><p>${escapeHtml(paper.abstract)}</p></div>`
+    ? `<div class="paper-abstract" hidden><p>${escapeHtml(paper.abstract)}</p>${keywordsHtml}</div>`
     : "";
   return `<li>
     <div class="paper-title">${escapeHtml(paper.title)}</div>
