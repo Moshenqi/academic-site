@@ -195,13 +195,16 @@ function paperItem(paper, lang, authorLinks) {
   const linkItems = (paper.links || []).map(
     (l) => `<a href="${l.url}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`
   );
+  if (paper.isbn) {
+    linkItems.unshift(`<span class="paper-identifier">ISBN: ${escapeHtml(paper.isbn)}</span>`);
+  }
   if (paper.abstract) {
     linkItems.unshift(
       `<button type="button" class="abs-toggle" aria-expanded="false">${i18n[lang].absToggle}</button>`
     );
   }
   const links = linkItems.length
-    ? `<span class="paper-links">${linkItems.join("")}</span>`
+    ? `<span class="paper-links${paper.isbn ? " paper-links--metadata" : ""}">${linkItems.join("")}</span>`
     : "";
   const status = paper.status ? `, ${escapeHtml(paper.status)}` : "";
   const keywords = Array.isArray(paper.keywords)
@@ -216,7 +219,7 @@ function paperItem(paper, lang, authorLinks) {
   return `<li>
     <div class="paper-title">${escapeHtml(paper.title)}</div>
     <div class="paper-authors">${renderAuthors(paper.authors, authorLinks)}</div>
-    <div class="paper-venue"><em>${escapeHtml(paper.venue)}</em>, ${paper.year}${status}${links}</div>
+    <div class="paper-venue${paper.language === "zh" ? " paper-venue--zh" : ""}"><em>${escapeHtml(paper.venue)}</em>, ${paper.year}${status}${links}</div>
     ${abstract}
   </li>`;
 }

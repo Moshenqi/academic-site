@@ -10,19 +10,6 @@
   },
   "publications": [
     {
-      "title": "Bureaucracy",
-      "authors": "Xiao Ma, Xinyang Gao",
-      "venue": "In Zhengxu Wang, Shu Keng, and Shiping Tang (eds.), Comparative Politics (2nd ed.). Fudan University Press",
-      "year": 2026,
-      "status": "Textbook chapter (in Chinese); ISBN: 978-7-309-18620-8",
-      "links": [
-        {
-          "label": "Douban",
-          "url": "https://book.douban.com/subject/38656990/"
-        }
-      ]
-    },
-    {
       "title": "The Overrepresented Winner? Ethnic Minority Legislators in China's National People's Congress",
       "authors": "Wenhui Yang, Xinyang Gao*",
       "venue": "The China Quarterly",
@@ -51,11 +38,27 @@
       "authors": "Andreas Wimmer, Xinyang Gao (Translated), Duancheng Yang (Proofread)",
       "venue": "Peking University Political Science Review",
       "year": 2025,
+      "language": "zh",
       "status": "Vol. 19",
       "abstract": "The role of nationalism in the modern world has become increasingly prominent. In most countries, its rise has been closely intertwined with war, shaping both domestic and international conflict. Traditionally, nationalism has been understood either as a byproduct of war or as an instrument of mass mobilization. This article argues instead that nationalism should be seen not only as a catalyst for war but also as a fundamental explanatory factor behind violent conflicts—including civil wars and interstate wars—over the past two centuries. Drawing on macro-historical evidence, the study identifies a “double-wave pattern” of conflict: the first wave was driven by imperialist expansion and large-scale wars of conquest, while the second emerged from the rise of nationalist movements that challenged imperial rule, giving rise to separatist wars and interstate rivalries. Two contemporary case studies further demonstrate how ethnic political exclusion within nation-states can generate civil wars and how cross-border ethnic ties can trigger interstate conflicts. The article concludes by emphasizing that wars fueled by nationalism are not inevitable; mechanisms such as power-sharing and assimilation provide viable pathways for mitigating ethnic inequalities and reducing the risk of conflict.",
       "links": [
         { "label": "PDF", "url": "./public/papers/wimmer-gao-2025-nationalism-war-translation.pdf" }
       ]
+    },
+    {
+      "title": "Bureaucracy",
+      "authors": "Xiao Ma, Xinyang Gao",
+      "venue": "In Zhengxu Wang, Shu Keng, and Shiping Tang (eds.), Comparative Politics (2nd ed.). Fudan University Press",
+      "year": 2026,
+      "status": "Textbook chapter (in Chinese)",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://book.douban.com/subject/38656990/"
+        }
+      ],
+      "language": "zh",
+      "isbn": "978-7-309-18620-8"
     }
   ],
   "workingPapers": [
