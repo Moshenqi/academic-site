@@ -10,6 +10,19 @@
   },
   "publications": [
     {
+      "title": "Bureaucracy",
+      "authors": "Xiao Ma, Xinyang Gao",
+      "venue": "In Zhengxu Wang, Shu Keng, and Shiping Tang (eds.), Comparative Politics (2nd ed.). Fudan University Press",
+      "year": 2026,
+      "status": "Textbook chapter (in Chinese); ISBN: 978-7-309-18620-8",
+      "links": [
+        {
+          "label": "Douban",
+          "url": "https://book.douban.com/subject/38656990/"
+        }
+      ]
+    },
+    {
       "title": "The Overrepresented Winner? Ethnic Minority Legislators in China's National People's Congress",
       "authors": "Wenhui Yang, Xinyang Gao*",
       "venue": "The China Quarterly",
