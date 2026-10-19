@@ -1,5 +1,6 @@
 {
   "authorLinks": {
+    "马啸": "https://xiao-ma.me/",
     "Xiao Ma": "https://xiao-ma.me/",
     "Weilin Xiao": "https://xwl822.github.io/",
     "Songpo Yang": "https://www.songpoyang.com/",
@@ -134,6 +135,15 @@
       "year": 2026,
       "status": "",
       "abstract": "When do artificial intelligence (AI) risks shape public support for AI development? We argue that public attitudes toward AI development reflect both the type of risk and whether citizens can interpret it and perceive a meaningful stake. We test this argument using a conjoint experiment and a vignette experiment conducted in Beijing. In the conjoint experiment, AI systems associated with high unemployment risk were less likely to be chosen by respondents with prior AI experience, especially employed respondents who felt insecure about their jobs. Ethical safeguards, by contrast, did not consistently affect choices between AI systems. In the vignette experiment, an integrated AI-risk vignette increased worry and vigilance without raising average support for strict regulation. Yet its effect on regulatory preference increased with concern about AI replacing human work, highlighting a distinction between affective response and policy preference. This framework links algorithmic governance to the political economy of technological change by specifying the conditions under which AI risks translate into opposition to or constraints on AI development.",
+      "links": []
+    },
+    {
+      "title": "政府预警为何失灵？基于灾害性天气预警的调查实验",
+      "authors": "高昕阳，马啸*",
+      "venue": "工作论文",
+      "year": 2026,
+      "status": "",
+      "abstract": "政府预警为何难以转化为公众的有效避险？随着极端灾害性天气频发，预警信号已经成为风险治理的关键工具。通过两阶段调查实验，本研究探讨了灾害性天气预警信息对公众避险遵从意向以及风险感知的影响。研究发现：第一，当预警信号包含政策指引及权威信源时，公众的避险遵从意向均难以有效改变。第二，公众对不同权威信源的认知加工存在显著差异，因而其避险遵从意向呈现一种“权威悖论”：权威信源虽能显著提升公众对政府风险应对能力的信心，但因公众的情感反应差异而诱发“安全错觉”，其避险遵从意向不升反降。第三，预警信息与公众即时体感之间的偏差也会影响公众对政府应对风险的信心。相较于其他治理主体，基层权威的信誉资源最为脆弱。本研究揭示了风险沟通中“认知—行为”转化逻辑的复杂性，对优化超大型城市风险治理具有现实启示。",
       "links": []
     }
   ]
