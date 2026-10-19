@@ -101,12 +101,12 @@
       ]
     },
     {
-      "title": "Looks Like a Representative? Facial Appearances and Legislative Performance in China",
+      "title": "Looks Like a Representative? Facial Impressions and Representative Activity in China",
       "authors": "Xinyang Gao, Weilin Xiao, Songpo Yang*",
       "venue": "工作论文",
       "year": 2026,
       "status": "",
-      "abstract": "Voters and political selectors reward candidates who look the part, on a tacit assumption that those who look like able representatives will go on to represent. We argue that this translation is conditional, not automatic. An appearance advantage at selection carries into office only where holding office rewards visible effort. China's Local People's Congresses, whose deputies are indirectly elected and answer upward rather than to voters, are a setting where those incentives are weak. Scoring the faces of nearly five thousand provincial deputies with a deep-learning model that rates them as human observers would, we ask whether favorable facial traits predict the suggestions they file. Deputies who look more competent, trustworthy, attractive, or aggressive are no more active or responsive than their peers, and the most competent-looking file somewhat fewer. Appearance, we conclude, is an unreliable guide to the substance of representation: voters and selectors who read capability from a face are apt to be misled, whether under open elections or under appointment, and do better to weigh records than looks. The look of a representative is not the work of one.",
+      "abstract": "Facial impressions shape political selection, but do people who look suited to office also represent more actively once they hold it? We argue that the relationship depends partly on the purposes for which representatives are chosen. We study China’s people’s congresses, using a model trained on human ratings to score portraits of 4,565 provincial deputies. Deputies have higher perceived competence and trustworthiness than governing officials. Within the congress, however, deputies with higher perceived competence are less likely to submit policy suggestions and submit fewer overall. Perceived trustworthiness, aggressiveness, and attractiveness have no significant association with suggestion activity. The negative participation association appears among government-employed deputies, while the estimate for deputies outside government is close to zero. These findings indicate an impression associated with political advancement can accompany less use of the channels of representation.",
       "links": []
     },
     {
