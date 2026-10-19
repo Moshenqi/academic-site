@@ -244,18 +244,9 @@ function renderPapers(data, lang) {
   });
 }
 
-/* ── Map (Leaflet + CARTO minimalist tiles) ── */
+/* ── Map (Leaflet + OpenStreetMap tiles) ── */
 const PKU_COORDS = [39.9921, 116.3046];
-let mapTiles = null;
 let mapMarker = null;
-
-function isDarkTheme() {
-  return document.documentElement.getAttribute("data-theme") === "dark";
-}
-
-function mapTileUrl() {
-  return `https://{s}.basemaps.cartocdn.com/${isDarkTheme() ? "dark_all" : "light_all"}/{z}/{x}/{y}{r}.png`;
-}
 
 function mapAccentColor() {
   return getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
@@ -273,11 +264,11 @@ function initMapEmbed(lang) {
   });
   map.attributionControl.setPrefix(false);
 
-  mapTiles = L.tileLayer(mapTileUrl(), {
-    subdomains: "abcd",
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    className: "osm-tiles",
     maxZoom: 19,
     attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>',
+      '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
   }).addTo(map);
 
   mapMarker = L.circleMarker(PKU_COORDS, {
@@ -297,7 +288,6 @@ function initMapEmbed(lang) {
 }
 
 function refreshMapTheme() {
-  if (mapTiles) mapTiles.setUrl(mapTileUrl());
   if (mapMarker) mapMarker.setStyle({ fillColor: mapAccentColor() });
 }
 

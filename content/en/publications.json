@@ -1,5 +1,6 @@
 {
   "authorLinks": {
+    "Xiao Ma": "https://xiao-ma.me/",
     "Weilin Xiao": "https://xwl822.github.io/",
     "Songpo Yang": "https://www.songpoyang.com/",
     "Wenhui Yang": "https://wenhuiyang.weebly.com/",
@@ -69,7 +70,14 @@
       "year": 2026,
       "status": "",
       "abstract": "Political consumerism is usually directed outward: consumers boycott firms they oppose and buycott firms they endorse. Using an online survey experiment in China (N = 1,100) built around the Xinjiang cotton controversy, we ask whether it can also turn inward. Respondents strongly favored a fictional domestic brand over a matched foreign brand at baseline, yet official-media news accusing the domestic brand of exploiting patriotic sentiment produced the sharpest shift in the experiment, moving support toward the foreign alternative, raising anger and anxiety, and reducing pride; exploratory analyses suggest consumer ethnocentrism buffered the shift without reversing it. National identity, these results suggest, operates not only as a shield for domestic brands but as a standard they can fail. Brand nationality shapes what political news means to consumers, and domestic status can become a liability as well as an asset.",
-      "keywords": ["political consumerism", "national identity", "brand nationality", "consumer ethnocentrism", "survey experiment", "China"],
+      "keywords": [
+        "political consumerism",
+        "national identity",
+        "brand nationality",
+        "consumer ethnocentrism",
+        "survey experiment",
+        "China"
+      ],
       "links": []
     },
     {
@@ -80,8 +88,14 @@
       "status": "",
       "abstract": "Recent advancements in large language models (LLMs) demonstrate strong potential for generating novel research ideas, yet such ideas often struggle with feasibility and effectiveness. In this paper, we investigate whether augmenting LLMs with relevant data during the ideation process can improve idea quality. Our framework integrates data at two stages: (1) incorporating metadata during idea generation to guide models toward more feasible concepts, and (2) introducing an automated preliminary validation step during idea selection to assess the empirical plausibility of hypotheses within ideas. We evaluate our approach in the social science domain, with a specific focus on climate negotiation topics. Expert evaluation shows that metadata improves the feasibility of generated ideas by 20%, while automated validation improves the overall quality of selected ideas by 7%. Beyond assessing the quality of LLM-generated ideas, we conduct a human study to examine whether these ideas, augmented with related data and preliminary validation, can inspire researchers in their own ideation. Participants report that the LLM-generated ideas and validation are highly useful, and the ideas they propose with such support are proven to be of higher quality than those proposed without assistance. Our findings highlight the potential of data-augmented research ideation and underscore the practical value of LLM-assisted ideation in real-world academic settings.",
       "links": [
-        { "label": "arXiv", "url": "https://arxiv.org/abs/2505.21396" },
-        { "label": "PDF", "url": "./public/papers/liu-dong-gao-feng-pang-2026-augmenting-research-ideation.pdf" }
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2505.21396"
+        },
+        {
+          "label": "PDF",
+          "url": "./public/papers/liu-dong-gao-feng-pang-2026-augmenting-research-ideation.pdf"
+        }
       ]
     },
     {
@@ -100,6 +114,24 @@
       "year": 2026,
       "status": "",
       "abstract": "How do socialist institutional legacies shape the distributional consequences of market transition? While modernization theory predicts that markets reduce ascriptive inequality, post-communist states witness paradoxical regression in female labor force participation (FLFP). We propose an institutional-dependence theory: because gender equality under state socialism was sustained by administrative intervention rather than endogenous development, deeper welfare-state penetration left women dependent on institutional protection and vulnerable to state retreat. We test this argument using China's 1990s marketization reform, leveraging the “Third Front Construction” campaign as a quasi-experiment for exogenous variation in pre-reform danwei (work unit) intensity. Using difference-in-differences and instrumental variable designs on county-level census data (1982–2000), we find that regions with extensive danwei legacies experienced significantly larger widening of the gender labor gap, driven by discriminatory public-sector displacement and re-familialization of care work. These findings challenge linear modernization narratives, highlighting how socialist institutional legacies condition the gendered costs of market transition.",
+      "links": []
+    },
+    {
+      "title": "Sorting the Outside World: Chinese Views of Foreign Countries, 1998–2023",
+      "authors": "Xinyang Gao, Weilin Xiao*",
+      "venue": "Working Paper",
+      "year": 2026,
+      "status": "",
+      "abstract": "Is the Chinese public turning against the outside world, or sorting it into increasingly distinct geopolitical positions? Generalized cooling would weaken the domestic basis for international engagement, whereas geopolitical sorting would harden attitudes toward rivals while preserving support for favored states. We examine thirteen probability-based waves of the Beijing Area Study from 1998 to 2023, using a fixed battery of evaluations of the United States, Russia, Japan, Germany, and North Korea. We conceptualize foreign-country attitudes as an evaluative architecture with a common evaluative level and a relational structure defined by relative position, differentiation, and direction. Evaluative level shows no continuous decline, providing little evidence of sustained generalized cooling. Instead, the central transformation is geopolitical sorting: the United States loses relative standing as Russia and North Korea gain it, and since the late 2010s, evaluations have remained organized around a persistent Russia–North Korea versus United States–Japan contrast. Associational evidence links this structure to an identity-based orientation toward the nation and a threat-based appraisal of the external environment. Combining rare longitudinal data with a new framework, the study shows how Chinese public opinion sorts foreign states into partners and rivals amid intensifying international competition.",
+      "links": []
+    },
+    {
+      "title": "AI Risks, Citizen Stakes, and Public Support for AI Development: Evidence from Two Survey Experiments in Beijing",
+      "authors": "Xinyang Gao, Weilin Xiao, Xiao Ma*",
+      "venue": "Working Paper",
+      "year": 2026,
+      "status": "",
+      "abstract": "When do artificial intelligence (AI) risks shape public support for AI development? We argue that public attitudes toward AI development reflect both the type of risk and whether citizens can interpret it and perceive a meaningful stake. We test this argument using a conjoint experiment and a vignette experiment conducted in Beijing. In the conjoint experiment, AI systems associated with high unemployment risk were less likely to be chosen by respondents with prior AI experience, especially employed respondents who felt insecure about their jobs. Ethical safeguards, by contrast, did not consistently affect choices between AI systems. In the vignette experiment, an integrated AI-risk vignette increased worry and vigilance without raising average support for strict regulation. Yet its effect on regulatory preference increased with concern about AI replacing human work, highlighting a distinction between affective response and policy preference. This framework links algorithmic governance to the political economy of technological change by specifying the conditions under which AI risks translate into opposition to or constraints on AI development.",
       "links": []
     }
   ]

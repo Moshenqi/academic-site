@@ -112,3 +112,8 @@ git add -A && git commit -m "Update content" && git push
 - Palette is drawn from the Xin'anjiang banner photo (slate blue / teal / warm paper).
 - Typography: Source Serif 4 + Noto Serif SC for headings, Source Sans 3 for body.
 - Dark mode follows system preference; manual toggle is stored in `localStorage`.
+- Contact map: Leaflet with standard OpenStreetMap tiles (no API key).
+  Keep the visible attribution and normal browser caching/referrer behavior,
+  following <https://operations.osmfoundation.org/policies/tiles/>.
+  Light mode uses warm-grey tiles with a teal marker; dark mode adapts the
+  tile colors. Both treatments use CSS without reloading tiles.

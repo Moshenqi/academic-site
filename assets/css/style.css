@@ -646,7 +646,7 @@ p { margin: 0 0 0.9rem; }
   margin-top: 1.8rem;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 18px rgba(29, 42, 50, 0.05);
   border: 1px solid var(--line);
   aspect-ratio: 16 / 8.5;
 }
@@ -657,11 +657,29 @@ p { margin: 0 0 0.9rem; }
   font-family: var(--sans);
 }
 
+/* A quiet, warm-grey basemap keeps the site's teal location marker prominent.
+   Filter only tiles so labels in popups, controls and attribution stay crisp. */
+#map .osm-tiles {
+  filter: grayscale(1) contrast(0.78) brightness(1.12) sepia(0.08);
+}
+
+[data-theme="dark"] #map .osm-tiles {
+  filter: grayscale(1) invert(1) contrast(0.82) brightness(0.85);
+}
+[data-theme="dark"] .map-wrap { box-shadow: var(--shadow); }
+
 /* Leaflet chrome tuned to the site's design */
+#map .leaflet-control-zoom {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(29, 42, 50, 0.06);
+}
 #map .leaflet-control-zoom a {
   background: var(--surface);
-  color: var(--text);
+  color: var(--accent);
   border-color: var(--line);
+  font-weight: 400;
 }
 #map .leaflet-control-zoom a:hover { color: var(--accent); }
 #map .leaflet-control-attribution {
