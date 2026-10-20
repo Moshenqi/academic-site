@@ -11,14 +11,14 @@ so day-to-day maintenance never touches HTML/CSS/JS.
 index.html              cover page (full-screen photo + entry nav)
 about.html              bio, research interests, links, talk photo
 publications.html       publications + working papers
-cv.html                 temporary update notice (not linked in navigation)
+cv.html                 CV download page (shared PDF in both languages)
 contact.html            contact info
 assets/css/style.css    design: colors, typography, layout
 assets/js/site.js       rendering, language switch, dark mode, UI labels (i18n)
 assets/img/             banner.jpg (cover/banners), portrait.jpg, talk.jpg
 content/en/*.json       English content  ← edit these
 content/zh/*.json       Chinese content  ← edit these
-public/cv/              CV PDFs withdrawn while being revised
+public/cv/              current academic CV PDF
 public/papers/          paper PDFs hosted on the site
 vercel.json             static deployment config
 ```
@@ -73,10 +73,11 @@ HTML allowed).
 
 ### Update CV
 
-The old PDFs and navigation links were withdrawn on 2026-10-20. Editable drafts and
-private backups are kept outside this deployment directory. When the new CVs are
-ready, add the approved PDFs, restore the bilingual download links and navigation,
-and re-add `/cv` to the sitemap; remove the temporary `noindex` notice.
+Both English and Chinese pages link to the same approved mixed-language CV:
+`public/cv/Xinyang_Gao_Academic_CV.pdf` (published 2026-10-20).
+Replace that file when updating the CV. The download button labels are translated
+in `assets/js/site.js`; the PDF URL stays the same in either language.
+Editable sources and private backups are kept outside this deployment directory.
 
 ### Replace photos
 
