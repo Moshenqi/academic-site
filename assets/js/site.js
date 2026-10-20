@@ -22,8 +22,7 @@ const i18n = {
     coverRole: "政治学博士研究生",
     coverAffil: "北京大学政府管理学院",
     mapLink: "在 Google 地图中查看",
-    cvLead: "完整简历请见：",
-    cvButton: "下载简历（PDF）",
+    cvLead: "新版简历正在更新中。",
     heroCredit: "新安江水电站 —— 新中国第一座自主设计建设的大型水电站 · 作者摄于 2024 年 1 月",
     talkCaption: "于北京大学政府管理学院作学术报告",
     footerCredit: "页首照片：浙江建德 · 新安江水电站（作者自摄）",
@@ -51,8 +50,7 @@ const i18n = {
     coverRole: "Ph.D. Student in Political Science",
     coverAffil: "School of Government, Peking University",
     mapLink: "View on Google Maps",
-    cvLead: "My full curriculum vitae is available here:",
-    cvButton: "Download CV (PDF)",
+    cvLead: "An updated CV is being prepared.",
     heroCredit:
       "Xin'anjiang Hydropower Station — the first large hydropower station designed and built by New China · Photo by the author, Jan 2024",
     talkCaption: "Presenting at the School of Government, Peking University",
@@ -143,12 +141,6 @@ function renderProfile(profile, lang) {
   }
   const iconEmail = document.getElementById("link-email");
   if (iconEmail) iconEmail.href = `mailto:${profile.email}`;
-
-  const cvLink = document.getElementById("cv-link");
-  if (cvLink) {
-    cvLink.href = profile.cv;
-    cvLink.textContent = i18n[lang].cvButton;
-  }
 
   const researchList = document.getElementById("research-list");
   if (researchList) {
@@ -354,8 +346,7 @@ async function bootstrap() {
 
   const needsProfile =
     document.getElementById("about-text") ||
-    document.getElementById("email-link") ||
-    document.getElementById("cv-link");
+    document.getElementById("email-link");
   const needsPapers = document.getElementById("publications-list");
 
   const [profile, papers] = await Promise.all([
