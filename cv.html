@@ -22,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;500;600&family=Noto+Serif+SC:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./assets/vendor/pdfjs/web/pdf_viewer.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -50,12 +51,20 @@
       <h1 data-i18n="cvHeading">CV</h1>
     </div>
 
-    <main class="content">
+    <main class="content cv-content">
       <section id="cv" class="section fade-in">
-        <p data-i18n="cvLead">My full curriculum vitae is available here:</p>
-        <p>
-          <a id="cv-link" href="./public/cv/Xinyang_Gao_Academic_CV.pdf" target="_blank" rel="noopener" class="cv-btn" data-i18n="cvButton">Download CV (PDF)</a>
-        </p>
+        <div class="cv-toolbar">
+          <div class="cv-actions">
+            <a id="cv-link" href="./public/cv/Xinyang_Gao_Academic_CV.pdf" download class="cv-btn" data-i18n="cvButton">Download CV (PDF)</a>
+            <a href="./public/cv/Xinyang_Gao_Academic_CV.pdf" target="_blank" rel="noopener" data-i18n="cvOpen">Open in new tab</a>
+          </div>
+        </div>
+        <div class="cv-reader">
+          <div id="cv-viewer" class="cv-viewer" tabindex="0" role="region" aria-label="Xinyang Gao — Curriculum vitae (PDF)">
+            <div id="cv-pages" class="pdfViewer"></div>
+          </div>
+          <p id="cv-status" class="cv-status" role="status" data-i18n="cvLoading">Loading PDF…</p>
+        </div>
       </section>
     </main>
 
@@ -65,5 +74,6 @@
     </footer>
 
     <script src="./assets/js/site.js"></script>
+    <script type="module" src="./assets/js/cv-viewer.js"></script>
   </body>
 </html>

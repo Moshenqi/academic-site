@@ -606,6 +606,36 @@ p { margin: 0 0 0.9rem; }
 }
 
 /* ── CV ── */
+.cv-content { max-width: 1080px; }
+.cv-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.cv-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.cv-actions > a { font-size: 0.95rem; }
+.cv-reader {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #e6e6e6;
+  box-shadow: var(--shadow);
+}
+.cv-viewer { position: absolute; inset: 0; overflow: auto; }
+.cv-viewer:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.cv-status { position: relative; padding: 2rem; margin: 0; color: #333; }
+.cv-status[hidden] { display: none; }
+.cv-reader .pdfViewer { padding: 12px 0; }
+.cv-reader .pdfViewer .page { box-sizing: content-box; }
+@media (max-width: 600px) {
+  .cv-reader { height: 75vh; min-height: 440px; }
+}
 .cv-btn {
   display: inline-flex;
   align-items: center;

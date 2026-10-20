@@ -11,7 +11,7 @@ so day-to-day maintenance never touches HTML/CSS/JS.
 index.html              cover page (full-screen photo + entry nav)
 about.html              bio, research interests, links, talk photo
 publications.html       publications + working papers
-cv.html                 CV download page (shared PDF in both languages)
+cv.html                 embedded CV preview and download (shared PDF)
 contact.html            contact info
 assets/css/style.css    design: colors, typography, layout
 assets/js/site.js       rendering, language switch, dark mode, UI labels (i18n)
@@ -75,7 +75,9 @@ HTML allowed).
 
 Both English and Chinese pages link to the same approved mixed-language CV:
 `public/cv/Xinyang_Gao_Academic_CV.pdf` (published 2026-10-20).
-Replace that file when updating the CV. The download button labels are translated
+The CV page renders the PDF using locally hosted PDF.js 5.6.205, with selectable
+text, clickable links, and download/new-tab links. The vendored library and its
+Apache-2.0 license are in `assets/vendor/pdfjs/`. Replace that file when updating the CV. The download button labels are translated
 in `assets/js/site.js`; the PDF URL stays the same in either language.
 Editable sources and private backups are kept outside this deployment directory.
 

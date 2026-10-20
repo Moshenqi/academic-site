@@ -1,0 +1,3 @@
+PDF.js 5.6.205 — Mozilla Foundation
+Source: pdfjs-dist (bundled workspace dependency)
+License: Apache-2.0; see LICENSE.
